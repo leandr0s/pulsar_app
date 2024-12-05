@@ -3,10 +3,8 @@
 
 import pandas as pd
 import streamlit as st
-import matplotlib.pyplot as plt
 import numpy as np
 import altair as alt
-import graphviz
 import pickle  # to load a saved modelimport base64  # to handle gif encoding
 
 st.title("Lista precificações")
@@ -49,9 +47,9 @@ with st.container():
     st.write("This is inside the container2")
 
 rand = np.random.normal(1, 2, size=20)
-fig, ax = plt.subplots()
-ax.hist(rand, bins=15)
-st.pyplot(fig)
+#fig, ax = plt.subplots()
+#ax.hist(rand, bins=15)
+#st.pyplot(fig)
 
 df = pd.DataFrame(np.random.randn(10, 2), columns=['x', 'y'])
 st.line_chart(df)
@@ -63,7 +61,7 @@ df = pd.DataFrame(np.random.randn(500, 3), columns=['x', 'y', 'z'])
 chart = alt.Chart(df).mark_circle().encode(    x='x', y='y', size='z', color='z', tooltip=['x', 'y', 'z'])
 st.altair_chart(chart, use_container_width=True)
 
-st.graphviz_chart('''    digraph {        Big_shark -> Tuna        Tuna -> Mackerel        Mackerel -> Small_fishes        Small_fishes -> Shrimp    }''')
+#st.graphviz_chart('''    digraph {        Big_shark -> Tuna        Tuna -> Mackerel        Mackerel -> Small_fishes        Small_fishes -> Shrimp    }''')
 
 df = pd.DataFrame(    np.random.randn(500, 2) / [50, 50] + [37.76, -122.4], columns=['lat', 'lon'])
 st.map(df)
