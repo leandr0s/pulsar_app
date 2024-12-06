@@ -1,11 +1,9 @@
 
 import pandas as pd
 import streamlit as st
-import matplotlib.pyplot as plt
 import numpy as np
 import altair as alt
-import graphviz
-import pickle  # to load a saved modelimport base64  # to handle gif encoding
+
 
 st.title("Nova Precificação")
 
