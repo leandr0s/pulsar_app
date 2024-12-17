@@ -3,6 +3,8 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 import altair as alt
+import controller.auth2 as au
+
 
 
 st.title("Nova Precificação")
@@ -125,5 +127,6 @@ with col3:
     st.number_input('percentual_garantia:', 0.0, 999.9, value=0.0, step=.05, format="%f")
 
 if st.button('Gravar'):
-    st.info("It's easy to build a Streamlit app")
+    au.get_data_table("electric-armor-429218-g7","electric-armor-429218-g7.prf_cs.log_precificacao", "us-east4",[])
+    st.info("Dados enviados com sucesso!")
 st.button('Cancelar')

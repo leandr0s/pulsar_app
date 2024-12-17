@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "electric-armor-429218-g7",
+  "private_key_id": "9ed6ac4c504c9b80561042005658d4795212f75c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDhM6g8JsCIOYl4\nJfanTxQkwNyNh5SKWtGtYInWrHy8sBJfzAjojxq7+FH4Jp55+fJImz9fc2XMW1SN\nA7TzQBz0E6IDwA2qssOun2rLwpRjBrvGruFSDRyYnbiRfeK+cyRT2ssKTm5bzNS2\nGBeZ3SLx9xaTsUuBkUBBPPYW9xD6HyWT9Fx9gr7rdJ8/JP0Cq1q089ZHGymhkwCm\nRl7I9+rsy2OeVZArimhYIsYwCmRkIYyZ8UdeIs7wxgcFUT932RrceRn+x0Zh9JES\nFTcJpuijkF1Pu1Qvqt4jkV4UbspFmcZ3lpRADeb0IZ9f+RXbHjyviiv7p0hxVLOo\n9hr1PEyTAgMBAAECggEAFMN5BvbBuK2pZZkGeV2aq1rW2vu9r9X40CX+/3qO06ze\nPNPonFyZZ+xYzmrtIKzxcE1UFf5jS+i9znShie4G3WA0B2l9ORhbX23WYGwT11+H\nD6YPI0wPL2kXW97B+bJPDqY1I0Gg/jjQAewNvQN9Fdckz0BBCHS2em1e+TYVbCIn\nvoMuw+3rcheBaMp/PbnGk24c+dAYmpYKWcEw/UmaNegsN5RpEO2x5TKXgEtADjuD\naf3WOcFqxj+IxZDhKJxe5VTyt3INsg6OtcRqHMehMMRPPK9UhqWFW+o2VODmbuD5\nhScq5C4Me6a/k55v1JzMnvE0VucjCqEF3gkqTAt6uQKBgQD3X5hAIhGVGv1Q1OjD\nPbu0ZKsPxJz/l59J6wAiW6SHRK/MCfPAbuENeX+hgkkstqLBRxFzj6w9oZ+F6O7t\nmtVeMaSNbhejmgRhSn9w6JjjYJiShq6t0iNnyegrHEY4lsi34PHQx5sIlxNHe+86\nOt9FC7jF6QgCOQS2CRmf5ZPQawKBgQDpDiCIFzPtgUj1DSOA30Qof1MIOTITz1Tt\nM9Ofxw3jEuBhK5U9AdXIpWEgs3waUYO5Rn4e8I/sOIjmXNwM9Ft6VXfewsXqKfwk\n1dYMk5Ug+UVzK+ixYbNE49YjvBgTRTjLuoUn/d0TH2G2CPBwq2IECwfDp+xHJAmO\nc7wu62beeQKBgCVlAwv22neSy+ZTORiClYRwj1dj3mPY1NCEwNFwzw9Pt899Vaaq\nXEUAL+YHXu5ucW4MQzwX5O6wJwBENRIgDM8fbAOhN9uYZb8bVuaHks0UhhvoVjGa\niZWf9QPHU2osiQ0a6RMpiWskA1sUBhbkXWn/mp/4WSiU2/x0pbYBK3YfAoGAAMkw\naOUTIsDl2xWxQfT+yNgtEoEG3zQ6yBX9p7NHI7XjldBMz4jbDLMqEa8pQvl1ZUGM\nmVQcWCKUq5oyj8SfLlltbw3fFvwPQpyJ/T7eKN9OUaYbQcXfkeLmzPYMarw4Bc/a\nNRlRDohzjuaW0Ppy+SqEWy+Mx2yir51KTCo1DZkCgYEA8SXBYLcFYEr4F7iJby72\nMZqBb2GD2yEg/Zt6ufV6fUeCJhtgs77tBwPWdOITOGOCTiaAck6vQhB2eoFk4haR\nQFB3/LtEtPj+uhb0FdPvYZqc+TghAl1csnTzZw4BHr4/emMEy88j9vtMXV6VFZ0+\no8+lzj+SZsxe41QObTikvZ4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "electric-armor-429218-g7@electric-armor-429218-g7.iam.gserviceaccount.com",
+  "client_id": "102272257145946103092",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/electric-armor-429218-g7%40electric-armor-429218-g7.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
