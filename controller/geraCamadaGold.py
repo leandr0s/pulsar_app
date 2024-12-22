@@ -1,66 +1,61 @@
-# %%
-# With BigQuery DataFrames, you can use many familiar Pandas methods, but the
-# processing happens BigQuery rather than the runtime, allowing you to work with larger
-# DataFrames that would otherwise not fit in the runtime memory.
-# Learn more here: https://cloud.google.com/python/docs/reference/bigframes/latest
-import pandas as pd
 import bigframes.pandas as bf
-# Imports the Google Cloud client library
-from google.cloud import storage
-from google.cloud import bigquery
-from google.oauth2 import service_account
 import os
-#from google.auth import impersonated_credentials
-#from google.oauth2.credentials import Credentials
-#from googleapiclient.discovery import build
+from controller import auth2 as au
+from google.cloud import storage
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
 
-#electric-armor-429218-g7.prf_cs.grp_cstos_grp_rec_imp
+# Caminho para o arquivo JSON da conta de serviço
+SERVICE_ACCOUNT_FILE = "./config_param/electric-armor-429218-g7-f95603f613a1.json"
+BUCKET_SILVER = "pulsar-transiente-zone"
+BUCKET_GOLD = "pulsar-transiente-trust"
+PROJECT_NAME = 'electric-armor-429218-g7'
 
 bf.options.bigquery.location = "us-east4" #this variable is set based on the dataset you chose to query
 bf.options.bigquery.project = "electric-armor-429218-g7" #this variable is set based on the dataset you chose to query
-# The name for the new bucket
-bucket_name = "pulsar-transiente-trust"
-bucket_repository = "pulsar-transiente-zone"
-blob_name = './config_param/electric-armor-429218-g7-f95603f613a1.json'
-credencial = ''
-path_credencial = '/metadata/token.json'
-key_content = ''
-scopes = ['https://www.googleapis.com/auth/bigquery']
 
-# %%
-from google.cloud import storage
+#credencial = au.getCredentialGCP(SERVICE_ACCOUNT_FILE)
 
-os.environ.setdefault("GCLOUD_PROJECT", "electric-armor-429218-g7")
+#credencialBG = au.getCredentialBigQuery(SERVICE_ACCOUNT_FILE)
 
-#storage_client = storage.Client()
-#bucket = storage_client.bucket(bucket_repository)
-blob = open(blob_name)
-key_content = str(blob.read())
-print(key_content)
+#credencialJson = au.getCredentialFromJson(SERVICE_ACCOUNT_FILE)
+
+def getServiceAccountFile():
+    return SERVICE_ACCOUNT_FILE
+
+def gravaDadosNaCamadaSilver(df,storage_client,file_name):
+    '''
+    os.environ.setdefault("GCLOUD_PROJECT", "electric-armor-429218-g7")
+    # Escopos que a aplicação precisa acessar
+    SCOPES = ["https://www.googleapis.com/auth/cloud-platform"]
+    BIG_QUERY_SCOPES = ["https://www.googleapis.com/auth/bigquery"]
+
+    # Autenticar usando a conta de serviço
+    credentials = service_account.Credentials.from_service_account_file(
+        SERVICE_ACCOUNT_FILE, scopes=SCOPES
+    )
+
+    # Autenticar usando a conta de serviço
+    credentialsBigQuery = service_account.Credentials.from_service_account_file(
+        SERVICE_ACCOUNT_FILE, scopes=BIG_QUERY_SCOPES
+    )
+    
+    service = build("storage", "v1", credentials=credentials)
+    '''
+    #storage_client = storage.Client.from_service_account_json(SERVICE_ACCOUNT_FILE)
+    bucket = storage_client.bucket(BUCKET_SILVER)
+    blob = bucket.blob(file_name)
+    print(df)
+    blob.upload_from_string(df.to_csv(header=True,sep=';',index=False), 'text/csv')
+    print("Dados gravado com sucesso!")
+
+def gravaDadosNaCamadaGold(table_name):
+    df_silver = bf.read_gbq(table_name)
+    df_gold = df_silver.to_pandas()
+    df_gold.to_gbq(destination_table=PROJECT_NAME+'.'+table_name, project_id=PROJECT_NAME , if_exists='replace', credentials=credencial)
+    print("Dados gravado com sucesso!")
+
 '''
-with blob.open("r") as f:
-        key_content = f.read()
-        print('teste###############')
-        print(key_content)
-'''
-        
-# %%
-try:
-  os.mkdir("/metadata")
-except Exception:
-  print('o diretorio ja existe!')
-# create a empty text file
-fp = open(path_credencial, 'w')
-fp.write(key_content)
-fp.close()
-
-# %%
-credencial = service_account.Credentials.from_service_account_file(path_credencial,scopes=scopes)
-
-# %%
-#atualiza camada rom com os novos dados, cadastro do app
-
-
 
 #atualiza tabela de precificacao
 bf_precificacao = bf.read_csv('gs://pulsar-transiente-zone/precificacao/precificacao.csv', sep=';')
@@ -68,6 +63,7 @@ df_precificacao = bf_precificacao.to_pandas()
 
 print(df_precificacao)
 
+'''
 '''
 df_precificacao.to_gbq(destination_table='electric-armor-429218-g7.prf_cs.precificacao', project_id='electric-armor-429218-g7' , if_exists='append', credentials=credencial)
 
