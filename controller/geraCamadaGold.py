@@ -11,8 +11,10 @@ BUCKET_SILVER = "pulsar-transiente-zone"
 BUCKET_GOLD = "pulsar-transiente-trust"
 PROJECT_NAME = 'electric-armor-429218-g7'
 
-bf.options.bigquery.location = "us-east4" #this variable is set based on the dataset you chose to query
-bf.options.bigquery.project = "electric-armor-429218-g7" #this variable is set based on the dataset you chose to query
+#this variable is set based on the dataset you chose to query
+bf.options.bigquery.location = "us-east4" 
+#this variable is set based on the dataset you chose to query
+bf.options.bigquery.project = "electric-armor-429218-g7" 
 
 
 def getServiceAccountFile():
