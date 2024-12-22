@@ -14,11 +14,6 @@ PROJECT_NAME = 'electric-armor-429218-g7'
 bf.options.bigquery.location = "us-east4" #this variable is set based on the dataset you chose to query
 bf.options.bigquery.project = "electric-armor-429218-g7" #this variable is set based on the dataset you chose to query
 
-#credencial = au.getCredentialGCP(SERVICE_ACCOUNT_FILE)
-
-#credencialBG = au.getCredentialBigQuery(SERVICE_ACCOUNT_FILE)
-
-#credencialJson = au.getCredentialFromJson(SERVICE_ACCOUNT_FILE)
 
 def getServiceAccountFile():
     return SERVICE_ACCOUNT_FILE
