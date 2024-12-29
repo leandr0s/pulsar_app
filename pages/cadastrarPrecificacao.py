@@ -172,13 +172,17 @@ if st.button('Grava'):
     #file_name_log = 'log_precificacao99.csv'
     #file_name_grp_itens = 'grp_itens_prf99.csv'
     credential = au.getCredentialFromJson(controle.getServiceAccountFile())
-    controle.gravaPrecificacaoNaCamadaSilver(df_precificacao,credential,file_name_precificacao)
-    controle.gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,credential,file_name_pram_item)
+    credentialBQ = au.getCredentialBigQuery(controle.getServiceAccountFile())
+    controle.gravaPrecificacaoNaCamadaSilver(df_precificacao,credential,file_name_precificacao,credentialBQ)
+
+    credential = au.getCredentialFromJson(controle.getServiceAccountFile())
+    credentialBQ = au.getCredentialBigQuery(controle.getServiceAccountFile())
+    controle.gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,credential,file_name_pram_item,credentialBQ)
     #controle.gravaDadosNaCamadaSilver(df_grp,credential,file_name_grp_itens)
     #controle.gravaDadosNaCamadaSilver(df_log,credential,file_name_log)
     st.info("Simulacao realizada com sucesso!")
 
-    credentialBQ = au.getCredentialBigQuery(controle.getServiceAccountFile())
+    
 
     location_precificacao = 'gs://pulsar-transiente-zone/precificacao/precificacao.csv'
     table_precificacao = 'electric-armor-429218-g7.prf_cs.precificacao'
@@ -192,18 +196,30 @@ if st.button('Grava'):
     location_log = 'gs://pulsar-transiente-zone/log_precificacao/log_precificacao.csv'
     table_log = 'electric-armor-429218-g7.prf_cs.log_precificacao'
     
-    controle.atualizaCamadaSilver(location_precificacao,table_precificacao,credentialBQ)
-    controle.atualizaCamadaSilver(location_param,table_param,credentialBQ)
-    controle.atualizaCamadaSilver(location_grp,table_grp,credentialBQ)
-    controle.atualizaCamadaSilver(location_log,table_log,credentialBQ)
+    #controle.atualizaCamadaSilver(location_precificacao,table_precificacao,credentialBQ)
+    #controle.atualizaCamadaSilver(location_param,table_param,credentialBQ)
+    #controle.atualizaCamadaSilver(location_grp,table_grp,credentialBQ)
+    #controle.atualizaCamadaSilver(location_log,table_log,credentialBQ)
 
     
     table_name_precificacao = 'electric-armor-429218-g7.prf_cs.gold_dados_precificacao'
     table_name_custos = 'electric-armor-429218-g7.prf_cs.gold_custos'
     table_name_impostos = 'electric-armor-429218-g7.prf_cs.gold_impostos'
-    controle.gravaDadosNaCamadaGold(table_name_precificacao,credentialBQ)
-    controle.gravaDadosNaCamadaGold(table_name_custos,credentialBQ)
-    controle.gravaDadosNaCamadaGold(table_name_impostos,credentialBQ)
+    file_name_precificacao = 'gold_dados_precificacao.csv'
+    file_name_custos = 'gold_custos.csv'
+    file_name_impostos = 'gold_impostos.csv'
+
+    credentialBQ = au.getCredentialBigQuery(controle.getServiceAccountFile())
+    credential = au.getCredentialFromJson(controle.getServiceAccountFile())
+    controle.gravaDadosNaCamadaGold(table_name_precificacao,file_name_precificacao,credential,credentialBQ)
+
+    credentialBQ = au.getCredentialBigQuery(controle.getServiceAccountFile())
+    credential = au.getCredentialFromJson(controle.getServiceAccountFile())
+    controle.gravaDadosNaCamadaGold(table_name_custos,file_name_custos,credential,credentialBQ)
+
+    credentialBQ = au.getCredentialBigQuery(controle.getServiceAccountFile())
+    credential = au.getCredentialFromJson(controle.getServiceAccountFile())
+    controle.gravaDadosNaCamadaGold(table_name_impostos,file_name_impostos,credential,credentialBQ)
   
 
 
