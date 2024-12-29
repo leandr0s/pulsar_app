@@ -11,6 +11,7 @@ from googleapiclient.discovery import build
 from google.cloud import storage
 from controller import auth2 as au
 
+
 st.title("Nova Precificação")
 
 st.caption("Dados da precificação")
@@ -18,7 +19,7 @@ st.caption("Dados da precificação")
 
 col1, col2 = st.columns(2)
 with col1:
-    contratante = st.text_area('Contratante')
+    contratante = st.text_input('Contratante')
 
 
 col1, col2, col3 = st.columns(3)
@@ -26,18 +27,15 @@ col1, col2, col3 = st.columns(3)
 with col1:
     vigencia = st.number_input('Vigencia:', 0, 999)
 with col2:
-    st.number_input('Margem Percentual:', 0, 999, value=0, step=1)
-with col3:
     dt_sessao = st.date_input('Data Sessão:')
-
 
 
 col1, col2 = st.columns(2)
 with col1:
-    criterio_julgamento = st.text_area('Criterio Julgamento')
-    modo_disputa = st.selectbox('Modo Disputa', ['Aberto', 'Fechado', 'Outros'])
+    criterio_julgamento = st.text_input('Criterio Julgamento')
+    modo_disputa = st.selectbox('Modo Disputa', ['Aberto', 'Fechado'])
 
-    objeto = st.text_area('Objeto')
+    objeto = st.text_input('Objeto da contratação')
 
 col1, col2 = st.columns(2)
 with col1:
@@ -49,7 +47,7 @@ st.caption("Itens da precificação")
 with st.container():
     col1, col2 = st.columns(2)
     with col1:
-        item_ma = st.selectbox('Airtime_MA', ['Mobile Priority - 50Gb Subscription'
+        item_ma = st.selectbox('Airtime', ['Mobile Priority - 50Gb Subscription'
                                 , 'Mobile Priority - 1TB Subscription'
                                 , 'Mobile Priority - 5TB Subscription'
                                 ,'Priority - 40GB Subscription'
@@ -60,16 +58,16 @@ with st.container():
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        quantidade_ma= st.number_input('Quantidade_MA: ', 0, 10)
-        importacao_ma = st.number_input('importacao_MA: ', 0, 999)
+        quantidade_ma= st.number_input('Quantidade de Pontos: ', 0, 10)
+        importacao_ma = 0
     with col2:
-        valor_ma = st.number_input('Valor Venda_MA: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
+        valor_ma = st.number_input('Vr. Aritime: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_ma = st.number_input('percentual Desconto_MA: ', 0, 999)
+        percentual_ma = st.number_input('(%)AirTime: ', 0, 999)
       
     col1, col2 = st.columns(2)
     with col1:
-        item_ml = st.selectbox('Locação de Equipamento_ML', ['Antena Starlink Flat High Performance'
+        item_ml = st.selectbox('Locação de Equipamento', ['Antena Starlink Flat High Performance'
                                                , 'Antena Starlink Standard'
                                                , 'Adaptador Ethernet'
                                                ,'Inversor 12 V'
@@ -81,24 +79,42 @@ with st.container():
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        quantidade_ml =st.number_input('Quantidade_ML: ', 0, 10)
-        importacao_ml = st.number_input('importacao_ML: ', 0, 999)
+        quantidade_ml =st.number_input('Quant. Antena: ', 0, 10)
+        importacao_ml = 0
     with col2:
-        valor_ml = st.number_input('Valor Venda_ML: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
+        valor_ml = st.number_input('Vr. Antena: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_ml = st.number_input('percentual Desconto_ML: ', 0, 999)
+        percentual_ml = st.number_input('(%)Antena: ', 0, 999)
+
+    with col1:
+        item_ml_outros = st.multiselect('Locação de Outros Equipamentos', ['Adaptador Ethernet'
+                                               ,'Inversor 12 V'
+                                               ,'Patch Cord'
+                                               ,'Maleta de transporte'
+                                               ,'Pulsar IO'
+                                               ,'Sistema de monitoramento (Gerencia Pulsar)'])
+    
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        quantidade_outros =st.number_input('Quant. Outros Equipamentos: ', 0, 10)
+        importacao_outros = 0
+    with col2:
+        valor_outros = st.number_input('Vr. Outros Equipamentos: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
+    with col3:
+        percentual_outros = st.number_input('(%)Outros Equipamentos: ', 0, 999)
 
     item_mo = st.checkbox('Servico de operacao e manutencao')
 
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        quantidade_mo = st.number_input('Quantidade_MO: ', 0, 10)
-        importacao_mo = st.number_input('importacao_MO: ', 0, 999)
+        quantidade_mo = st.number_input('Quant. Operação: ', 0, 10)
+        importacao_mo = 0
     with col2:
-        valor_mo = st.number_input('Valor Venda_MO: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
+        valor_mo = st.number_input('Vr. Operação: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_mo = st.number_input('percentual Desconto_MO: ', 0, 999)
+        percentual_mo = st.number_input('(%))Operação: ', 0, 999)
 
 
     item_mn = st.checkbox('Serviço de Instalação')
@@ -106,12 +122,12 @@ with st.container():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        quantidade_mn = st.number_input('Quantidade_MN: ', 0, 10)
-        importacao_mn = st.number_input('importacao_MN: ', 0, 999)
+        quantidade_mn = st.number_input('Quant. Instalação: ', 0, 10)
+        importacao_mn = 0
     with col2:
-        valor_mn = st.number_input('Valor Venda_MN: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
+        valor_mn = st.number_input('Vr. Instalação: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_mn = st.number_input('percentual Desconto_MN: ', 0, 999)
+        percentual_mn = st.number_input('(%)Instalação: ', 0, 999)
 
 
 st.caption("Indexadores")
@@ -121,18 +137,18 @@ col1, col2, col3 = st.columns(3)
 
 with st.container():
     with col1:
-        idx_ctc_dolar_airtime = st.number_input('idx_ctc_dolar_airtime:', 0.0, 999.9, value=0.0, step=.05, format="%f")
-        idx_oveheade = st.number_input('idx_oveheade:', 0.0, 999.9, value=0.0, step=.05, format="%f")
-        idx_percentual = st.number_input('idx_percentual:', 0.0, 999.9, value=0.0, step=.05, format="%f")
-        premio_seguro = st.number_input('premio_seguro:', 0.0, 999.9, value=0.0, step=.05, format="%f")
+        idx_ctc_dolar_airtime = 0
+        idx_oveheade = st.number_input('Tx. Oveheade:', 0.0, 999.9, value=0.0, step=.05, format="%f")
+        idx_percentual = 0
+        premio_seguro = st.number_input('Premio Seguro:', 0.0, 999.9, value=0.0, step=.05, format="%f")
     with col2:
-        idx_ctc_dolar_antena = st.number_input('idx_ctc_dolar_antena:', 0.0, 999.9, value=0.0, step=.05, format="%f")
-        idx_tx_importacao = st.number_input('idx_tx_importacao:', 0.0, 999.9, value=0.0, step=.05, format="%f")
-        overhead = st.number_input('overhead:', 0.0, 999.9, value=0.0, step=.05, format="%f")
+        idx_ctc_dolar_antena = 0
+        idx_tx_importacao = st.number_input('Tx. Importação:', 0.0, 999.9, value=0.0, step=.05, format="%f")
+        overhead = st.number_input('Overhead:', 0.0, 999.9, value=0.0, step=.05, format="%f")
     with col3:
-        idx_custos_financeiros = st.number_input('idx_custos_financeiros:', 0.0, 999.9, value=0.0, step=.05, format="%f")
-        idx_comissao = st.number_input('idx_comissao:', 0.0, 999.9, value=0.0, step=.05, format="%f")
-        percentual_garantia = st.number_input('percentual_garantia:', 0.0, 999.9, value=0.0, step=.05, format="%f")
+        idx_custos_financeiros = st.number_input('Tx. Custos Financeiros:', 0.0, 999.9, value=0.0, step=.05, format="%f")
+        idx_comissao = st.number_input('Tx. Comissão:', 0.0, 999.9, value=0.0, step=.05, format="%f")
+        percentual_garantia = st.number_input('(%)Garantia:', 0.0, 999.9, value=0.0, step=.05, format="%f")
 
 if st.button('Grava'):
     if 'df_precificacao' not in st.session_state:
@@ -223,7 +239,7 @@ if st.button('Grava'):
   
 
 
-st.button('Cancelar')
+st.button('Voltar')
 
 
 if st.button(''):

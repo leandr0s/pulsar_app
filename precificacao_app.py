@@ -13,6 +13,7 @@ st.title("App Precificações Pulsar")
 st.sidebar.title("Precificação")
 st.sidebar.page_link("pages/cadastrarPrecificacao.py", label="Cadastrar")
 st.sidebar.page_link("pages/listarPrecificacao.py", label="Listar")
+st.sidebar.page_link("pages/calculaVlrPagamento.py", label="Calcula Vlr Pagamento")
 
 
 

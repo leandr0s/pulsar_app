@@ -5,8 +5,9 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 import altair as alt
+from controller import precificacaoController as pr
 
-
+df_precificacao = pr.getPrecificacao('A',3)
 
 with st.container():    
     st.write("Aguardando aprovação:")
@@ -14,10 +15,10 @@ with st.container():
     #df = pd.DataFrame(np.random.randn(10, 2), columns=['Contratante', 'UF'])
     df = pd.DataFrame(
         {
-            "name": ["1° BATALHAO DE ENGENHARIA", "TRIBUNAL DE JUSTIÇA DO MARANHÃO", "DEFENSORIA PUBLICA DA BAHIA"],
-            "uf": ["MS", "MA", "BA"],
-            "status": ["Em Precificacao", "Em Revisão", "Em Precificação"],
-            "url": ["https://extras.streamlit.app", "https://extras.streamlit.app", "https://extras.streamlit.app"]
+            "name": df_precificacao.contratante,
+            "uf": df_precificacao.uf,
+            "status": df_precificacao.status,
+            "url": 'https://lookerstudio.google.com/reporting/1f5d63fc-8e2b-473b-a96d-66c23f64cdf2/page/CbJ9D?ds18.contratante='+df_precificacao.contratante
         }
     )
     st.dataframe(
