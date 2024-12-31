@@ -58,7 +58,7 @@ with st.container():
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        quantidade_ma= st.number_input('Quantidade de Pontos: ', 0, 10)
+        quantidade_ma= st.number_input('Quant. Pontos: ', 0, 10)
         importacao_ma = 0
     with col2:
         valor_ma = st.number_input('Vr. Aritime: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
@@ -86,24 +86,78 @@ with st.container():
     with col3:
         percentual_ml = st.number_input('(%)Antena: ', 0, 999)
 
-    with col1:
-        item_ml_outros = st.multiselect('Locação de Outros Equipamentos', ['Adaptador Ethernet'
-                                               ,'Inversor 12 V'
-                                               ,'Patch Cord'
-                                               ,'Maleta de transporte'
-                                               ,'Pulsar IO'
-                                               ,'Sistema de monitoramento (Gerencia Pulsar)'])
+    item_ml_eth = st.checkbox('Adaptador Ethernet')
     
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        quantidade_outros =st.number_input('Quant. Outros Equipamentos: ', 0, 10)
+        quantidade_ml_eth =st.number_input('Quant. Adaptador Ethernet: ', 0)
         importacao_outros = 0
     with col2:
-        valor_outros = st.number_input('Vr. Outros Equipamentos: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
+        valor_ml_eth = st.number_input('Vr. Adaptador Ethernet: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_outros = st.number_input('(%)Outros Equipamentos: ', 0, 999)
+        percentual_ml_eth = st.number_input('(%)Adaptador Ethernet: ', 0)
 
+    item_ml_inv = st.checkbox('Inversor 12 V')
+    
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        quantidade_ml_inv =st.number_input('Quant. Inversor 12 V: ', 0)
+        importacao_outros = 0
+    with col2:
+        valor_ml_inv = st.number_input('Vr. Inversor 12 V: ', 0.0, value=0.0, step=.05, format="%f")
+    with col3:
+        percentual_ml_inv = st.number_input('(%)Inversor 12 V: ', 0)
+
+    item_ml_ptch = st.checkbox('Patch Cord')
+    
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        quantidade_ml_ptch =st.number_input('Quant. Patch Cord: ', 0)
+        importacao_outros = 0
+    with col2:
+        valor_ml_ptch = st.number_input('Vr. Patch Cord: ', 0.0, value=0.0, step=.05, format="%f")
+    with col3:
+        percentual_ml_ptch = st.number_input('(%)Patch Cord: ', 0)
+
+    item_ml_mala = st.checkbox('Maleta de transporte')
+    
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        quantidade_ml_mala =st.number_input('Quant. Maleta de transporte: ', 0)
+        importacao_outros = 0
+    with col2:
+        valor_ml_mala = st.number_input('Vr. Maleta de transporte: ', 0.0, value=0.0, step=.05, format="%f")
+    with col3:
+        percentual_ml_mala = st.number_input('(%)Maleta de transporte: ', 0)
+
+    item_ml_pio = st.checkbox('Pulsar IO')
+    
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        quantidade_ml_pio =st.number_input('Quant. Pulsar IO: ', 0)
+        importacao_outros = 0
+    with col2:
+        valor_ml_pio = st.number_input('Vr. Pulsar IO: ', 0.0, value=0.0, step=.05, format="%f")
+    with col3:
+        percentual_ml_pio = st.number_input('(%)Pulsar IO: ', 0)
+    
+    item_ml_mon = st.checkbox('Sist. Monitoramento (Gerencia Pulsar)')
+    
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        quantidade_ml_mon =st.number_input('Quant. Sist. Monitoramento: ', 0)
+        importacao_outros = 0
+    with col2:
+        valor_ml_mon = st.number_input('Vr. Sist. Monitoramento: ', 0.0, value=0.0, step=.05, format="%f")
+    with col3:
+        percentual_ml_mon = st.number_input('(%)Sist. Monitoramento: ', 0)
+    
     item_mo = st.checkbox('Servico de operacao e manutencao')
 
     col1, col2, col3 = st.columns(3)
@@ -182,6 +236,41 @@ if st.button('Grava'):
     df_mo = pd.DataFrame(param_mo_data,index=[0])
     st.session_state.df_mo = pd.concat([st.session_state.df_mo, df_ma],ignore_index=True)
 
+    if 'df_ml_eth' not in st.session_state:
+            st.session_state.df_ml_eth = pd.DataFrame(columns=['codigo','cod_item','vlr_venda','qnt','percentual_desconto','importacao'])
+    param_ml_eth_data = {'codigo':99,'cod_item': item_ml_eth, 'vlr_venda':valor_ml_eth,'qnt': quantidade_ml_eth, 'percentual_desconto': percentual_ml_eth, 'importacao': importacao_ml}
+    df_ml_eth = pd.DataFrame(param_ml_eth_data,index=[0])
+    st.session_state.df_ml_eth = pd.concat([st.session_state.df_ml_eth, df_ml_eth],ignore_index=True)
+
+    if 'df_ml_inv' not in st.session_state:
+            st.session_state.df_ml_inv = pd.DataFrame(columns=['codigo','cod_item','vlr_venda','qnt','percentual_desconto','importacao'])
+    param_ml_inv_data = {'codigo':99,'cod_item': item_ml_inv, 'vlr_venda':valor_ml_inv,'qnt': quantidade_ml_inv, 'percentual_desconto': percentual_ml_inv, 'importacao': 0}
+    df_ml_inv = pd.DataFrame(param_ml_inv_data,index=[0])
+    st.session_state.df_ml_inv = pd.concat([st.session_state.df_ml_inv, df_ml_inv],ignore_index=True)
+
+    if 'df_ml_ptch' not in st.session_state:
+            st.session_state.df_ml_ptch = pd.DataFrame(columns=['codigo','cod_item','vlr_venda','qnt','percentual_desconto','importacao'])
+    param_ml_ptch_data = {'codigo':99,'cod_item': item_ml_ptch, 'vlr_venda':valor_ml_ptch,'qnt': quantidade_ml_ptch, 'percentual_desconto': percentual_ml_ptch, 'importacao': 0}
+    df_ml_ptch = pd.DataFrame(param_ml_ptch_data,index=[0])
+    st.session_state.df_ml_ptch = pd.concat([st.session_state.df_ml_ptch, df_ml_ptch],ignore_index=True)
+
+    if 'df_ml_mala' not in st.session_state:
+            st.session_state.df_ml_mala = pd.DataFrame(columns=['codigo','cod_item','vlr_venda','qnt','percentual_desconto','importacao'])
+    param_ml_mala_data = {'codigo':99,'cod_item': item_ml_mala, 'vlr_venda':valor_ml_mala,'qnt': quantidade_ml_mala, 'percentual_desconto': percentual_ml_mala, 'importacao': 0}
+    df_ml_mala = pd.DataFrame(param_ml_mala_data,index=[0])
+    st.session_state.df_ml_mala = pd.concat([st.session_state.df_ml_mala, df_ml_mala],ignore_index=True)
+
+    if 'df_ml_pio' not in st.session_state:
+            st.session_state.df_ml_pio = pd.DataFrame(columns=['codigo','cod_item','vlr_venda','qnt','percentual_desconto','importacao'])
+    param_ml_pio_data = {'codigo':99,'cod_item': item_ml_pio, 'vlr_venda':valor_ml_pio,'qnt': quantidade_ml_pio, 'percentual_desconto': percentual_ml_pio, 'importacao': 0}
+    df_ml_pio = pd.DataFrame(param_ml_pio_data,index=[0])
+    st.session_state.df_ml_pio = pd.concat([st.session_state.df_ml_pio, df_ml_pio],ignore_index=True)
+
+    if 'df_ml_mon' not in st.session_state:
+            st.session_state.df_ml_mon = pd.DataFrame(columns=['codigo','cod_item','vlr_venda','qnt','percentual_desconto','importacao'])
+    param_ml_mon_data = {'codigo':99,'cod_item': item_ml_mon, 'vlr_venda':valor_ml_mon,'qnt': quantidade_ml_mon, 'percentual_desconto': percentual_ml_mon, 'importacao': 0}
+    df_ml_mon = pd.DataFrame(param_ml_mon_data,index=[0])
+    st.session_state.df_ml_mon = pd.concat([st.session_state.df_ml_mon, df_ml_mon],ignore_index=True)
 
     file_name_precificacao = 'precificacao/precificacao.csv'
     file_name_pram_item = 'param_itens/param_itens.csv'
@@ -193,7 +282,7 @@ if st.button('Grava'):
 
     credential = au.getCredentialFromJson(controle.getServiceAccountFile())
     credentialBQ = au.getCredentialBigQuery(controle.getServiceAccountFile())
-    controle.gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,credential,file_name_pram_item,credentialBQ)
+    controle.gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,df_ml_mala,df_ml_mon,df_ml_pio,df_ml_ptch,credential,file_name_pram_item,credentialBQ)
     #controle.gravaDadosNaCamadaSilver(df_grp,credential,file_name_grp_itens)
     #controle.gravaDadosNaCamadaSilver(df_log,credential,file_name_log)
     st.info("Simulacao realizada com sucesso!")
