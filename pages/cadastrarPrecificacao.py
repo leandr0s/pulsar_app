@@ -25,7 +25,7 @@ with col1:
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    vigencia = st.number_input('Vigencia:', 0, 999)
+    vigencia = st.number_input('Vigencia:', 0)
 with col2:
     dt_sessao = st.date_input('Data Sessão:')
 
@@ -39,7 +39,33 @@ with col1:
 
 col1, col2 = st.columns(2)
 with col1:
-    uf = st.selectbox('UF', ['BA', 'MG', 'RJ'])
+    uf = st.selectbox('UF', ['AL',
+                                'MT',
+                                'MS',
+                                'RS',
+                                'SC',
+                                'MG',
+                                'RN',
+                                'SP',
+                                'AC',
+                                'GO',
+                                'PA',
+                                'SE',
+                                'AM',
+                                'CE',
+                                'DF',
+                                'ES',
+                                'PB',
+                                'RJ',
+                                'RR',
+                                'TO',
+                                'BA',
+                                'PI',
+                                'MA',
+                                'AP',
+                                'PR',
+                                'RO',
+                                'PE'])
 
 
 st.caption("Itens da precificação")
@@ -58,12 +84,12 @@ with st.container():
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        quantidade_ma= st.number_input('Quant. Pontos: ', 0, 10)
+        quantidade_ma= st.number_input('Quant. Pontos: ', 0)
         importacao_ma = 0
     with col2:
-        valor_ma = st.number_input('Vr. Aritime: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
+        valor_ma = st.number_input('Vr. Aritime: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_ma = st.number_input('(%)AirTime: ', 0, 999)
+        percentual_ma = st.number_input('(%)AirTime: ', 0)
       
     col1, col2 = st.columns(2)
     with col1:
@@ -79,12 +105,12 @@ with st.container():
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        quantidade_ml =st.number_input('Quant. Antena: ', 0, 10)
+        quantidade_ml =st.number_input('Quant. Antena: ', 0)
         importacao_ml = 0
     with col2:
-        valor_ml = st.number_input('Vr. Antena: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
+        valor_ml = st.number_input('Vr. Antena: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_ml = st.number_input('(%)Antena: ', 0, 999)
+        percentual_ml = st.number_input('(%)Antena: ', 0)
 
     item_ml_eth = st.checkbox('Adaptador Ethernet')
     
@@ -163,12 +189,12 @@ with st.container():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        quantidade_mo = st.number_input('Quant. Operação: ', 0, 10)
+        quantidade_mo = st.number_input('Quant. Operação: ', 0)
         importacao_mo = 0
     with col2:
-        valor_mo = st.number_input('Vr. Operação: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
+        valor_mo = st.number_input('Vr. Operação: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_mo = st.number_input('(%))Operação: ', 0, 999)
+        percentual_mo = st.number_input('(%))Operação: ', 0)
 
 
     item_mn = st.checkbox('Serviço de Instalação')
@@ -176,12 +202,12 @@ with st.container():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        quantidade_mn = st.number_input('Quant. Instalação: ', 0, 10)
+        quantidade_mn = st.number_input('Quant. Instalação: ', 0)
         importacao_mn = 0
     with col2:
-        valor_mn = st.number_input('Vr. Instalação: ', 0.0, 999999.9, value=0.0, step=.05, format="%f")
+        valor_mn = st.number_input('Vr. Instalação: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_mn = st.number_input('(%)Instalação: ', 0, 999)
+        percentual_mn = st.number_input('(%)Instalação: ', 0)
 
 
 st.caption("Indexadores")
@@ -192,17 +218,17 @@ col1, col2, col3 = st.columns(3)
 with st.container():
     with col1:
         idx_ctc_dolar_airtime = 0
-        idx_oveheade = st.number_input('Tx. Oveheade:', 0.0, 999.9, value=0.0, step=.05, format="%f")
+        idx_oveheade = st.number_input('Tx. Oveheade:', 0.0, value=0.0, step=.05, format="%f")
         idx_percentual = 0
-        premio_seguro = st.number_input('Premio Seguro:', 0.0, 999.9, value=0.0, step=.05, format="%f")
+        premio_seguro = st.number_input('Premio Seguro:', 0.0, value=0.0, step=.05, format="%f")
     with col2:
         idx_ctc_dolar_antena = 0
-        idx_tx_importacao = st.number_input('Tx. Importação:', 0.0, 999.9, value=0.0, step=.05, format="%f")
-        overhead = st.number_input('Overhead:', 0.0, 999.9, value=0.0, step=.05, format="%f")
+        idx_tx_importacao = st.number_input('Tx. Importação:', 0.0, value=0.0, step=.05, format="%f")
+        overhead = st.number_input('Overhead:', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        idx_custos_financeiros = st.number_input('Tx. Custos Financeiros:', 0.0, 999.9, value=0.0, step=.05, format="%f")
-        idx_comissao = st.number_input('Tx. Comissão:', 0.0, 999.9, value=0.0, step=.05, format="%f")
-        percentual_garantia = st.number_input('(%)Garantia:', 0.0, 999.9, value=0.0, step=.05, format="%f")
+        idx_custos_financeiros = st.number_input('Tx. Custos Financeiros:', 0.0, value=0.0, step=.05, format="%f")
+        idx_comissao = st.number_input('Tx. Comissão:', 0.0, value=0.0, step=.05, format="%f")
+        percentual_garantia = st.number_input('(%)Garantia:', 0.0, value=0.0, step=.05, format="%f")
 
 if st.button('Grava'):
     if 'df_precificacao' not in st.session_state:
