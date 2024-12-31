@@ -27,7 +27,7 @@ with st.container():
             "name": "Contratante",
             "uf": "UF",
             "status": "Status",
-            "url": st.column_config.LinkColumn("Modificar")
+            "url": st.column_config.LinkColumn("Looker")
         },
         hide_index=True,
     )
