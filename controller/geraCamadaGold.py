@@ -35,8 +35,8 @@ def getServiceAccountFile():
     return SERVICE_ACCOUNT_FILE
 
 def gravaPrecificacaoNaCamadaSilver(df,storage_client,file_name,big_query_credential):
-    
-    df['codigo'] = __getProximoId('electric-armor-429218-g7.prf_cs.precificacao')
+    cod_precificacao = __getProximoId('electric-armor-429218-g7.prf_cs.precificacao')+1
+    df['codigo'] = cod_precificacao
     #print(Entidade.table_name[Entidade.PRECIFICACAO])
     bucket = storage_client.bucket(BUCKET_SILVER)
     blob = bucket.blob(file_name)
@@ -44,16 +44,18 @@ def gravaPrecificacaoNaCamadaSilver(df,storage_client,file_name,big_query_creden
     df['data_sessao'] = str(df['data_sessao'])
     df.to_gbq(destination_table='electric-armor-429218-g7.prf_cs.precificacao', project_id=PROJECT_NAME , if_exists='append', credentials=big_query_credential)
     print("Precificacao gravado com sucesso!")
+    return cod_precificacao
 
-def gravaDadosNaCamadaGold(table_name,file_name,credencial,credentialBQ):
-    df_silver = bf.read_gbq(table_name)
+def gravaDadosNaCamadaGold(gold_table,silver_table,file_name,credencial,credentialBQ):
+    df_silver = bf.read_gbq(silver_table)
     storage_client = storage.Client()
     bucket = credencial.bucket(BUCKET_GOLD)
     #print(df_silver)
     df_gold = df_silver.to_pandas()
     bucket.blob(file_name).upload_from_string(df_gold.to_csv(header=True,sep=';',index=False), 'text/csv')
-    df_gold.to_gbq(destination_table=table_name, project_id=PROJECT_NAME , if_exists='replace', credentials=credentialBQ)
+    df_gold.to_gbq(destination_table=gold_table, project_id=PROJECT_NAME , if_exists='replace', credentials=credentialBQ)
     print("Dados gravado com sucesso!")
+    return df_gold
 
 def gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,df_ml_mala,df_ml_mon,df_ml_pio,df_ml_ptch,storage_client,file_name, big_query_credential):
     ultimo_cod_param_item = __getProximoId('electric-armor-429218-g7.prf_cs.param_itens')
@@ -163,7 +165,7 @@ def __assossiaGrpItem(df,storage_client,big_query_credential):
 
 def __getProximoId(table_name):
     id = bf.read_gbq_query('select max(codigo) as codigo from '+table_name)
-    return id.iloc[0]['codigo']+1
+    return id.iloc[0]['codigo']
 
 def __geraLogPrecificacao(cod_precificacao,acao,status,storage_client,big_query_credential):
     data_atual = datetime.today()

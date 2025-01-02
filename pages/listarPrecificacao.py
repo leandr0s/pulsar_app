@@ -7,10 +7,12 @@ import numpy as np
 import altair as alt
 from controller import precificacaoController as pr
 
-df_precificacao = pr.getPrecificacao('A',3)
+df_precificacao = pr.getPrecificacao('A',20)
 
 with st.container():    
     st.write("Aguardando aprovação:")
+
+    st.link_button("Ver no Looker", "https://lookerstudio.google.com/reporting/1f5d63fc-8e2b-473b-a96d-66c23f64cdf2/page/CbJ9D")
 
     #df = pd.DataFrame(np.random.randn(10, 2), columns=['Contratante', 'UF'])
     df = pd.DataFrame(
@@ -18,7 +20,7 @@ with st.container():
             "name": df_precificacao.contratante,
             "uf": df_precificacao.uf,
             "status": df_precificacao.status,
-            "url": 'https://lookerstudio.google.com/reporting/1f5d63fc-8e2b-473b-a96d-66c23f64cdf2/page/CbJ9D?ds18.contratante='+df_precificacao.contratante
+            "acao": df_precificacao.acao
         }
     )
     st.dataframe(
@@ -27,7 +29,7 @@ with st.container():
             "name": "Contratante",
             "uf": "UF",
             "status": "Status",
-            "url": st.column_config.LinkColumn("Looker")
+            "acao": "acao"
         },
         hide_index=True,
     )
