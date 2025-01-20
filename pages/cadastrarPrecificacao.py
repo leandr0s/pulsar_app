@@ -90,7 +90,7 @@ with st.container():
     with col2:
         valor_ma = st.number_input('Vr. Aritime: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_ma = st.number_input('(%)AirTime: ', 0)
+        percentual_ma = 0 #  st.number_input('(%)AirTime: ', 0)
       
     col1, col2 = st.columns(2)
     with col1:
@@ -111,7 +111,7 @@ with st.container():
     with col2:
         valor_ml = st.number_input('Vr. Antena: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_ml = st.number_input('(%)Antena: ', 0)
+        percentual_ml = 0 # st.number_input('(%)Antena: ', 0)
 
     item_ml_eth = st.checkbox('Adaptador Ethernet')
     
@@ -123,7 +123,7 @@ with st.container():
     with col2:
         valor_ml_eth = st.number_input('Vr. Adaptador Ethernet: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_ml_eth = st.number_input('(%)Adaptador Ethernet: ', 0)
+        percentual_ml_eth = 0 # st.number_input('(%)Adaptador Ethernet: ', 0)
 
     item_ml_inv = st.checkbox('Inversor 12 V')
     
@@ -135,7 +135,7 @@ with st.container():
     with col2:
         valor_ml_inv = st.number_input('Vr. Inversor 12 V: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_ml_inv = st.number_input('(%)Inversor 12 V: ', 0)
+        percentual_ml_inv = 0 #  st.number_input('(%)Inversor 12 V: ', 0)
 
     item_ml_ptch = st.checkbox('Patch Cord')
     
@@ -147,7 +147,7 @@ with st.container():
     with col2:
         valor_ml_ptch = st.number_input('Vr. Patch Cord: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_ml_ptch = st.number_input('(%)Patch Cord: ', 0)
+        percentual_ml_ptch = 0 # st.number_input('(%)Patch Cord: ', 0)
 
     item_ml_mala = st.checkbox('Maleta de transporte')
     
@@ -159,7 +159,7 @@ with st.container():
     with col2:
         valor_ml_mala = st.number_input('Vr. Maleta de transporte: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_ml_mala = st.number_input('(%)Maleta de transporte: ', 0)
+        percentual_ml_mala = 0 #  st.number_input('(%)Maleta de transporte: ', 0)
 
     item_ml_pio = st.checkbox('Pulsar IO')
     
@@ -171,7 +171,7 @@ with st.container():
     with col2:
         valor_ml_pio = st.number_input('Vr. Pulsar IO: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_ml_pio = st.number_input('(%)Pulsar IO: ', 0)
+        percentual_ml_pio = 0 # st.number_input('(%)Pulsar IO: ', 0)
     
     item_ml_mon = st.checkbox('Sist. Monitoramento (Gerencia Pulsar)')
     
@@ -183,7 +183,7 @@ with st.container():
     with col2:
         valor_ml_mon = st.number_input('Vr. Sist. Monitoramento: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_ml_mon = st.number_input('(%)Sist. Monitoramento: ', 0)
+        percentual_ml_mon = 0 # st.number_input('(%)Sist. Monitoramento: ', 0)
     
     item_mo = st.checkbox('Servico de operacao e manutencao')
 
@@ -195,7 +195,7 @@ with st.container():
     with col2:
         valor_mo = st.number_input('Vr. Operação: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_mo = st.number_input('(%))Operação: ', 0)
+        percentual_mo = 0 # st.number_input('(%))Operação: ', 0)
 
 
     item_mn = st.checkbox('Serviço de Instalação')
@@ -208,7 +208,7 @@ with st.container():
     with col2:
         valor_mn = st.number_input('Vr. Instalação: ', 0.0, value=0.0, step=.05, format="%f")
     with col3:
-        percentual_mn = st.number_input('(%)Instalação: ', 0)
+        percentual_mn = 0 # st.number_input('(%)Instalação: ', 0)
 
 
 st.caption("Indexadores")
@@ -225,11 +225,12 @@ with st.container():
     with col2:
         idx_ctc_dolar_antena = 0
         idx_tx_importacao = st.number_input('Tx. Importação:', 0.0, value=0.0, step=.05, format="%f")
-        overhead = st.number_input('Overhead:', 0.0, value=0.0, step=.05, format="%f")
+        percentual_garantia = st.number_input('(%)Garantia:', 0.0, value=0.0, step=.05, format="%f")
     with col3:
         idx_custos_financeiros = st.number_input('Tx. Custos Financeiros:', 0.0, value=0.0, step=.05, format="%f")
         idx_comissao = st.number_input('Tx. Comissão:', 0.0, value=0.0, step=.05, format="%f")
-        percentual_garantia = st.number_input('(%)Garantia:', 0.0, value=0.0, step=.05, format="%f")
+        overhead = idx_oveheade #st.number_input('Overhead:', 0.0, value=0.0, step=.05, format="%f")
+        
 
 if st.button('Grava'):
     if contratante == '' and quantidade_ma == 0 and quantidade_ml == 0:
