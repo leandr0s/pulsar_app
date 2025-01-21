@@ -40,33 +40,33 @@ with col1:
 
 col1, col2 = st.columns(2)
 with col1:
-    uf = st.selectbox('UF', ['AL',
-                                'MT',
-                                'MS',
-                                'RS',
-                                'SC',
-                                'MG',
-                                'RN',
-                                'SP',
-                                'AC',
-                                'GO',
-                                'PA',
-                                'SE',
+    uf = st.selectbox('UF', ['AC',
+                                'AL',
                                 'AM',
+                                'AP',
+                                'BA',
                                 'CE',
                                 'DF',
                                 'ES',
-                                'PB',
-                                'RJ',
-                                'RR',
-                                'TO',
-                                'BA',
-                                'PI',
+                                'GO',
                                 'MA',
-                                'AP',
+                                'MG',
+                                'MS',
+                                'MT',
+                                'PA',
+                                'PB',
+                                'PE',
+                                'PI',
                                 'PR',
+                                'RJ',
+                                'RN',
                                 'RO',
-                                'PE'])
+                                'RR',
+                                'RS',
+                                'SC',
+                                'SE',
+                                'SP',
+                                'TO'])
 
 
 st.caption("Itens da precificação")
@@ -96,12 +96,7 @@ with st.container():
     with col1:
         item_ml = st.selectbox('Locação de Equipamento', ['Antena Starlink Flat High Performance'
                                                , 'Antena Starlink Standard'
-                                               , 'Adaptador Ethernet'
-                                               ,'Inversor 12 V'
-                                               ,'Patch Cord'
-                                               ,'Maleta de transporte'
-                                               ,'Pulsar IO'
-                                               ,'Sistema de monitoramento (Gerencia Pulsar)'])
+                                               , 'Adaptador Ethernet'])
     
     col1, col2, col3 = st.columns(3)
 
