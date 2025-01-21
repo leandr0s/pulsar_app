@@ -75,3 +75,69 @@ df = pd.DataFrame(    np.random.randn(500, 2) / [50, 50] + [37.76, -122.4], colu
 st.map(df)
 
 
+
+    ### visualiza dados da precificação
+
+        #df_precificacao_silver = pr.getDadosPrecificacaoSilverByCodigo(cod_precificacao)
+        #df_csto_silver = pr.getCustosSilverPrecificacao(cod_precificacao)
+        #df_impostos_silver = pr.getImpostosSilverPrecificacao(cod_precificacao)
+
+    '''
+        df_precificacao_silver.contratante.iloc[0]
+        
+        with st.container():    
+            df = pd.DataFrame(
+                {
+                    "categoria": df_precificacao_silver.categoria,
+                    "vigencia": df_precificacao_silver.vigencia,
+                    "desc_item": df_precificacao_silver.desc_item,
+                    "qnt": df_precificacao_silver.qnt,
+                    "valor_ponto": df_precificacao_silver.valor_ponto
+                    
+                }
+            )
+            st.dataframe(
+                df,
+                column_config={
+                    "categoria": "categoria",
+                    "vigencia": "vigencia",
+                    "desc_item": "desc_item",
+                    "qnt":"qnt",
+                    "valor_ponto":"valor_ponto"
+                },
+                hide_index=True,
+            )
+
+            df_custos = pd.DataFrame(
+                {
+                    "custos": df_csto_silver.custos,
+                    "vlr_custos": df_csto_silver.vlr_custos
+                    
+                }
+            )
+            st.dataframe(
+                df_custos,
+                column_config={
+                    "custos": "custos",
+                    "vlr_custos": "vlr_custos"
+                },
+                hide_index=True,
+            )
+
+            
+            df_impostos = pd.DataFrame(
+                {
+                    "impostos": df_impostos_silver.imposto,
+                    "vlr_impostos": df_impostos_silver.vlr_impostos
+                    
+                }
+            )
+            st.dataframe(
+                df_impostos,
+                column_config={
+                    "impostos": "imposto",
+                    "vlr_impostos": "vlr_impostos"
+                },
+                hide_index=True,
+            )
+    '''

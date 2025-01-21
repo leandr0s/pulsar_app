@@ -81,7 +81,7 @@ def gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_m
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_ml],ignore_index=True)
 
-    if df_ml_ptch['qnt'].iloc[0] > 0 and df_ml_mon['cod_item'].iloc[0] == True:
+    if df_ml_ptch['qnt'].iloc[0] > 0 and df_ml_ptch['cod_item'].iloc[0] == True:
         #cod_item = bf.read_gbq_query('select t1.codigo from electric-armor-429218-g7.prf_cs.itens t1 where t1.objeto = \''+ str(df_ml_ptch['cod_item'].iloc[0]) + '\'')
         df_ml_ptch['cod_item'].iloc[0] = 12
         df_ml_ptch['codigo'].iloc[0] = ultimo_cod_param_item
@@ -89,7 +89,7 @@ def gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_m
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_ml_ptch],ignore_index=True)
 
-    if df_ml_eth['qnt'].iloc[0] > 0 and df_ml_mon['cod_item'].iloc[0] == True:
+    if df_ml_eth['qnt'].iloc[0] > 0 and df_ml_eth['cod_item'].iloc[0] == True:
         #cod_item = bf.read_gbq_query('select t1.codigo from electric-armor-429218-g7.prf_cs.itens t1 where t1.objeto = \''+ str(df_ml_eth['cod_item'].iloc[0]) + '\'')
         df_ml_eth['cod_item'].iloc[0] = 10
         df_ml_eth['codigo'].iloc[0] = ultimo_cod_param_item
@@ -97,7 +97,7 @@ def gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_m
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_ml_eth],ignore_index=True)
 
-    if df_ml_inv['qnt'].iloc[0] > 0 and df_ml_mon['cod_item'].iloc[0] == True:
+    if df_ml_inv['qnt'].iloc[0] > 0 and df_ml_inv['cod_item'].iloc[0] == True:
         #cod_item = bf.read_gbq_query('select t1.codigo from electric-armor-429218-g7.prf_cs.itens t1 where t1.objeto = \''+ str(df_ml_inv['cod_item'].iloc[0]) + '\'')
         df_ml_inv['cod_item'].iloc[0] = 11
         df_ml_inv['codigo'].iloc[0] = ultimo_cod_param_item
@@ -105,7 +105,7 @@ def gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_m
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_ml_inv],ignore_index=True)
 
-    if df_ml_mala['qnt'].iloc[0] > 0 and df_ml_mon['cod_item'].iloc[0] == True:
+    if df_ml_mala['qnt'].iloc[0] > 0 and df_ml_mala['cod_item'].iloc[0] == True:
         #cod_item = bf.read_gbq_query('select t1.codigo from electric-armor-429218-g7.prf_cs.itens t1 where t1.objeto = \''+ str(df_ml_mala['cod_item'].iloc[0]) + '\'')
         df_ml_mala['cod_item'].iloc[0] = 13
         df_ml_mala['codigo'].iloc[0] = ultimo_cod_param_item
@@ -121,7 +121,7 @@ def gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_m
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_ml_mon],ignore_index=True)
 
-    if df_ml_pio['qnt'].iloc[0] > 0 and df_ml_mon['cod_item'].iloc[0] == True:
+    if df_ml_pio['qnt'].iloc[0] > 0 and df_ml_pio['cod_item'].iloc[0] == True:
         #cod_item = bf.read_gbq_query('select t1.codigo from electric-armor-429218-g7.prf_cs.itens t1 where t1.objeto = \''+ str(df_ml_pio['cod_item'].iloc[0]) + '\'')
         df_ml_pio['cod_item'].iloc[0] = 14
         df_ml_pio['codigo'].iloc[0] = ultimo_cod_param_item
