@@ -128,9 +128,14 @@ def gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_m
         dados_grp_itens.append([ultimo_cod_param_item,'ML',cod_precificacao])
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_ml_pio],ignore_index=True)
+
         
-    if df_mn['qnt'].iloc[0] > 0:
-        df_mn['cod_item'].iloc[0] = 16
+    if df_mn['qnt'].iloc[0] > 0 and df_mn['cod_item'].iloc[0] != 'Sem Instalação':
+        if df_mn['cod_item'].iloc[0] == 'Eventual':
+            df_mn['cod_item'].iloc[0] = 16
+        elif df_mn['cod_item'].iloc[0] == 'Recorrente':
+            df_mn['cod_item'].iloc[0] = 16
+        else: df_mn['cod_item'].iloc[0] = None
         df_mn['codigo'].iloc[0] = ultimo_cod_param_item
         dados_grp_itens.append([ultimo_cod_param_item,'MN',cod_precificacao])
         ultimo_cod_param_item = ultimo_cod_param_item +1

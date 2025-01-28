@@ -193,7 +193,9 @@ with st.container():
         percentual_mo = 0 # st.number_input('(%))Operação: ', 0)
 
 
-    item_mn = st.checkbox('Serviço de Instalação')
+    item_mn = st.radio('Servico de Intalação', ['Sem Instalação','Eventual', 'Recorrente'])
+
+    print(item_mn)    
 
     col1, col2, col3 = st.columns(3)
     
