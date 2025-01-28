@@ -148,6 +148,10 @@ def gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_m
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_mo],ignore_index=True)
 
+
+    print("################ DATAFRAME DOS ITENS")
+    print(df)
+
     
     
     df_grp_itens = pd.DataFrame(dados_grp_itens,columns=['cod_param_item','cod_grupo','cod_precificacao'])
