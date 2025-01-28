@@ -262,7 +262,7 @@ if st.button('Grava'):
             st.session_state.df_mo = pd.DataFrame(columns=['codigo','cod_item','vlr_venda','qnt','percentual_desconto','importacao'])
         param_mo_data = {'codigo':99,'cod_item': item_mo, 'vlr_venda':valor_mo,'qnt': quantidade_mo, 'percentual_desconto': percentual_mo, 'importacao': importacao_mo}
         df_mo = pd.DataFrame(param_mo_data,index=[0])
-        st.session_state.df_mo = pd.concat([st.session_state.df_mo, df_ma],ignore_index=True)
+        st.session_state.df_mo = pd.concat([st.session_state.df_mo, df_mo],ignore_index=True)
 
         if 'df_ml_eth' not in st.session_state:
                 st.session_state.df_ml_eth = pd.DataFrame(columns=['codigo','cod_item','vlr_venda','qnt','percentual_desconto','importacao'])
