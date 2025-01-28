@@ -141,7 +141,7 @@ def gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_m
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_mn],ignore_index=True)
         
-    if df_mo['qnt'].iloc[0] > 0:
+    if df_mo['qnt'].iloc[0] > 0 and df_mo['cod_item'].iloc[0] == True:
         df_mo['cod_item'].iloc[0] = 17
         df_mo['codigo'].iloc[0] = ultimo_cod_param_item
         dados_grp_itens.append([ultimo_cod_param_item,'MO',cod_precificacao])
