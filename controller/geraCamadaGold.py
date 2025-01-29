@@ -58,7 +58,7 @@ def gravaDadosNaCamadaGold(gold_table,silver_table,file_name,credencial,credenti
     return df_gold
 
 def gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,df_ml_mala,df_ml_mon,df_ml_pio,df_ml_ptch,storage_client,file_name, big_query_credential):
-    ultimo_cod_param_item = __getProximoId('electric-armor-429218-g7.prf_cs.param_itens')
+    ultimo_cod_param_item = __getProximoId('electric-armor-429218-g7.prf_cs.param_itens')+1
     cod_precificacao = __getProximoId('electric-armor-429218-g7.prf_cs.precificacao')
 
     df = pd.DataFrame(columns=['codigo','cod_item','vlr_venda','qnt','percentual_desconto','importacao'])
@@ -148,11 +148,6 @@ def gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_m
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_mo],ignore_index=True)
 
-
-    print("################ DATAFRAME DOS ITENS")
-    print(df)
-
-    
     
     df_grp_itens = pd.DataFrame(dados_grp_itens,columns=['cod_param_item','cod_grupo','cod_precificacao'])
     
