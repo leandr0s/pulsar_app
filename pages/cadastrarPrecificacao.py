@@ -95,8 +95,7 @@ with st.container():
     col1, col2 = st.columns(2)
     with col1:
         item_ml = st.selectbox('Locação de Equipamento', ['Antena Starlink Flat High Performance'
-                                               , 'Antena Starlink Standard'
-                                               , 'Adaptador Ethernet'])
+                                               , 'Antena Starlink Standard'])
     
     col1, col2, col3 = st.columns(3)
 
