@@ -215,16 +215,16 @@ col1, col2, col3 = st.columns(3)
 with st.container():
     with col1:
         idx_ctc_dolar_airtime = 0
-        idx_oveheade = st.number_input('Tx. Oveheade:', 0.0, value=0.0, step=.05, format="%f")
+        idx_oveheade = st.number_input('Tx. Oveheade:', 0.0, value=7.0, step=.05, format="%f")
         idx_percentual = 0
-        premio_seguro = st.number_input('Premio Seguro:', 0.0, value=0.0, step=.05, format="%f")
+        premio_seguro = st.number_input('Premio Seguro:', 0.0, value=2.5, step=.05, format="%f")
     with col2:
         idx_ctc_dolar_antena = 0
         idx_tx_importacao = st.number_input('Tx. Importação:', 0.0, value=0.0, step=.05, format="%f")
-        percentual_garantia = st.number_input('(%)Garantia:', 0.0, value=0.0, step=.05, format="%f")
+        percentual_garantia = st.number_input('(%)Garantia:', 0.0, value=5.0, step=.05, format="%f")
     with col3:
-        idx_custos_financeiros = st.number_input('Tx. Custos Financeiros:', 0.0, value=0.0, step=.05, format="%f")
-        idx_comissao = st.number_input('Tx. Comissão:', 0.0, value=0.0, step=.05, format="%f")
+        idx_custos_financeiros = st.number_input('Tx. Custos Financeiros:', 0.0, value=3.0, step=.05, format="%f")
+        idx_comissao = st.number_input('Tx. Comissão:', 0.0, value=1.5, step=.05, format="%f")
         overhead = idx_oveheade #st.number_input('Overhead:', 0.0, value=0.0, step=.05, format="%f")
         
 
