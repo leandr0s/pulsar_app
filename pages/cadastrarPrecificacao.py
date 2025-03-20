@@ -26,7 +26,7 @@ with col1:
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    vigencia = st.number_input('Vigencia:', 0)
+    vigencia = st.number_input('Vigência:', 0)
 with col2:
     dt_sessao = st.date_input('Data Sessão:')
 
@@ -179,7 +179,7 @@ with st.container():
     with col3:
         percentual_ml_mon = 0 # st.number_input('(%)Sist. Monitoramento: ', 0)
     
-    item_mo = st.checkbox('Servico de operacao e manutencao')
+    item_mo = st.checkbox('Serviço de operaçâo e manutenção')
 
     col1, col2, col3 = st.columns(3)
     
@@ -215,9 +215,9 @@ col1, col2, col3 = st.columns(3)
 with st.container():
     with col1:
         idx_ctc_dolar_airtime = 0
-        idx_oveheade = st.number_input('Tx. Oveheade:', 0.0, value=7.0, step=.05, format="%f")
+        idx_oveheade = st.number_input('Tx. Ovehead:', 0.0, value=7.0, step=.05, format="%f")
         idx_percentual = 0
-        premio_seguro = st.number_input('Premio Seguro:', 0.0, value=2.5, step=.05, format="%f")
+        premio_seguro = st.number_input('Prêmio Seguro:', 0.0, value=2.5, step=.05, format="%f")
     with col2:
         idx_ctc_dolar_antena = 0
         idx_tx_importacao = st.number_input('Tx. Importação:', 0.0, value=0.0, step=.05, format="%f")
