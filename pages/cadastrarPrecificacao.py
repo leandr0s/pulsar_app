@@ -74,14 +74,10 @@ st.caption("Itens da precificação")
 with st.container():
     col1, col2 = st.columns(2)
     with col1:
-        item_ma = st.selectbox('Airtime', ['Mobile Priority - 50Gb Subscription'
-                                , 'Mobile Priority - 1TB Subscription'
-                                , 'Mobile Priority - 5TB Subscription'
-                                ,'Priority - 40GB Subscription'
-                                ,'Priority - 1TB Subscription'
-                                ,'Priority - 2TB Subscription'
-                                ,'Priority - 6TB Subscription'])
-    
+        item_ma = st.selectbox('Airtime', ['Terminal Access (500GB)'
+                                , 'Terminal Access (50GB)'])
+
+        
     col1, col2, col3 = st.columns(3)
 
     with col1:
