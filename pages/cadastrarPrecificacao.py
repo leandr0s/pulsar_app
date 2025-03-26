@@ -237,7 +237,7 @@ if st.button('Grava'):
         
         if 'df_ma' not in st.session_state:
             st.session_state.df_ma = pd.DataFrame(columns=['codigo','cod_item','vlr_venda','qnt','percentual_desconto','importacao'])
-        param_ma_data = {'codigo':99,'cod_item': item_ma, 'vlr_venda':valor_ma,'qnt': quantidade_ma, 'percentual_desconto': percentual_ma, 'importacao': importacao_ma}
+        param_ma_data = {'codigo':99,'cod_item': item_ma, 'vlr_venda':valor_ma,'qnt': quantidade_ma, 'percentual_desconto': percentual_ma, 'importacao': importacao_ma, 'franquia':franquia_ma}
         df_ma = pd.DataFrame(param_ma_data,index=[0])
         st.session_state.df_ma = pd.concat([st.session_state.df_ma, df_ma],ignore_index=True)
 
