@@ -81,11 +81,12 @@ with st.container():
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        quantidade_ma= st.number_input('Quant. Pontos: ', 0)
+        franquia_ma = st.number_input('Franquia GB: ', 0)
         importacao_ma = 0
     with col2:
-        valor_ma = st.number_input('Vr. Aritime: ', 0.0, value=0.0, step=.05, format="%f")
+        quantidade_ma= st.number_input('Quant. Pontos: ', 0)
     with col3:
+        valor_ma = st.number_input('Vr. Aritime: ', 0.0, value=0.0, step=.05, format="%f")
         percentual_ma = 0 #  st.number_input('(%)AirTime: ', 0)
       
     col1, col2 = st.columns(2)
