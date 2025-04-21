@@ -296,53 +296,20 @@ if st.button('Grava'):
         df_ml_mon = pd.DataFrame(param_ml_mon_data,index=[0])
         st.session_state.df_ml_mon = pd.concat([st.session_state.df_ml_mon, df_ml_mon],ignore_index=True)
 
-        file_name_precificacao = 'precificacao/precificacao.csv'
-        file_name_pram_item = 'param_itens/param_itens.csv'
+        file_name_precificacao = '..\\app\\data\\precificacao.csv'
+        file_name_pram_item = '..\\app\\data\\param_itens.csv'
+        file_name_grp_itens_prf = "..\\app\\data\\grp_itens_prf.csv"
+        file_name_itens_prf = "..\\app\\data\\dados_itens.csv"
+        file_name_log_precificacao = '..\\app\\data\\log_precificacao.csv'
+        file_name_data_log_precificacao = "..\\app\\data\\dados_log_precificacao.csv"
 
-        credential = au.getCredentialFromJson(controle.getServiceAccountFile())
-        credentialBQ = au.getCredentialBigQuery(controle.getServiceAccountFile())
-        cod_precificacao = controle.gravaPrecificacaoNaCamadaSilver(df_precificacao,credential,file_name_precificacao,credentialBQ)
+        df_log_precificacao = pd.read_csv(file_name_log_precificacao)
+        cod_precificacao = controle.gravaPrecificacaoDataFile(df_precificacao,file_name_precificacao,df_log_precificacao.iloc[-1]['cod_precificacao']+1)
+        controle.gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,df_ml_mala,df_ml_mon,df_ml_pio,df_ml_ptch,file_name_pram_item,cod_precificacao)
 
-        credential = au.getCredentialFromJson(controle.getServiceAccountFile())
-        credentialBQ = au.getCredentialBigQuery(controle.getServiceAccountFile())
-        controle.gravaItensPrecificacaoNaCamadaSilver(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,df_ml_mala,df_ml_mon,df_ml_pio,df_ml_ptch,credential,file_name_pram_item,credentialBQ)
+        print(df_precificacao)
+
         
-
-        location_precificacao = 'gs://pulsar-transiente-zone/precificacao/precificacao.csv'
-        table_precificacao = 'electric-armor-429218-g7.prf_cs.precificacao'
-
-        location_param = 'gs://pulsar-transiente-zone/param_itens/param_itens.csv'
-        table_param = 'electric-armor-429218-g7.prf_cs.param_itens'
-
-        location_grp = 'gs://pulsar-transiente-zone/grp_itens_prf/grp_itens_prf.csv'
-        table_grp = 'electric-armor-429218-g7.prf_cs.grp_itens_prf'
-
-        location_log = 'gs://pulsar-transiente-zone/log_precificacao/log_precificacao.csv'
-        table_log = 'electric-armor-429218-g7.prf_cs.log_precificacao'
-        
-        
-        table_gold_precificacao = 'electric-armor-429218-g7.prf_cs.gold_dados_precificacao'
-        table_gold_custos = 'electric-armor-429218-g7.prf_cs.gold_custos'
-        table_gold_impostos = 'electric-armor-429218-g7.prf_cs.gold_impostos'
-        table_silver_precificacao = 'electric-armor-429218-g7.prf_cs.vw_silver_dados_precificacao'
-        table_silver_custos = 'electric-armor-429218-g7.prf_cs.vw_silver_custos'
-        table_silver_impostos = 'electric-armor-429218-g7.prf_cs.vw_silver_impostos'
-        file_name_precificacao = 'gold_dados_precificacao.csv'
-        file_name_custos = 'gold_custos.csv'
-        file_name_impostos = 'gold_impostos.csv'
-
-        credentialBQ = au.getCredentialBigQuery(controle.getServiceAccountFile())
-        credential = au.getCredentialFromJson(controle.getServiceAccountFile())
-        controle.gravaDadosNaCamadaGold(table_gold_precificacao,table_silver_precificacao,file_name_precificacao,credential,credentialBQ)
-
-        credentialBQ = au.getCredentialBigQuery(controle.getServiceAccountFile())
-        credential = au.getCredentialFromJson(controle.getServiceAccountFile())
-        controle.gravaDadosNaCamadaGold(table_gold_custos,table_silver_custos,file_name_custos,credential,credentialBQ)
-
-        credentialBQ = au.getCredentialBigQuery(controle.getServiceAccountFile())
-        credential = au.getCredentialFromJson(controle.getServiceAccountFile())
-        controle.gravaDadosNaCamadaGold(table_gold_impostos,table_silver_impostos,file_name_impostos,credential,credentialBQ)
-
         st.info("Dados gravados com sucesso!")
 
 st.link_button("Voltar", "/precificacao_app")

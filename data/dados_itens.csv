@@ -1,0 +1,23 @@
+codigo,objeto,und,custo_ref,categoria,grp_categoria,peso,pacote
+20,Instalacao Recorrente,Unidade,3000,Recorrente,Servico de Instalacao,1,1
+16,Instalacao,Unidade,3000,Eventual,Servico de Instalacao,1,1
+17,Servico de operacao e manutencao,Unidade,2000,Recorrente,Servico de operacao e manutencao,1,1
+15,Logistica Antena,Unidade,450,Recorrente,Servico de operacao e manutencao,1,1
+18,Sistema de monitoramento (Gerencia Pulsar),Unidade,55,Recorrente,Sistema de monitoramento,1,1
+10,Adaptador Ethernet,Unidade,170,Recorrente,Subotal Adaptador Ethernet,1,1
+11,Inversor 12 V,Unidade,1407,Recorrente,Subotal Adaptador Ethernet,1,1
+19,Suporte Veicular,Unidade,70,Eventual,Subotal Adaptador Ethernet,1,1
+9,Antena Starlink Standard,Unidade,5438,Recorrente,Subotal Antena Starlink Standard,4,1
+8,Antena Starlink Flat High Performance,Unidade,18077,Recorrente,Subotal Antena Starlink Standard,1,1
+12,Patch Cord,Unidade,70,Recorrente,Subotal Inversor 12 V,9,1
+5,Priority - 1TB Subscription,Unidade,730,Recorrente,Subotal Serviço Airtime,1,1
+1,Mobile Priority - 50Gb Subscription,Unidade,1283,Recorrente,Subotal Serviço Airtime,1,1
+6,Priority - 2TB Subscription,Unidade,1450,Recorrente,Subotal Serviço Airtime,1,1
+3,Mobile Priority - 5TB Subscription,Unidade,25659,Recorrente,Subotal Serviço Airtime,1,1
+4,Priority - 40GB Subscription,Unidade,280,Recorrente,Subotal Serviço Airtime,1,1
+7,Priority - 6TB Subscription,Unidade,4340,Recorrente,Subotal Serviço Airtime,1,1
+2,Mobile Priority - 1TB Subscription,Unidade,5132,Recorrente,Subotal Serviço Airtime,1,1
+13,Maleta de transporte,Unidade,3500,Recorrente,Subtotal Locacao,3,1
+14,Pulsar IO,Unidade,750,Recorrente,Subtotal Locacao,1,1
+22,Terminal Access (50GB),Unidade,105,Recorrente,Subotal Serviço Airtime,1,50
+21,Terminal Access (500GB),Unidade,525,Recorrente,Subotal Serviço Airtime,1,500
