@@ -285,12 +285,12 @@ if st.button('Grava'):
         df_ml_mon = pd.DataFrame(param_ml_mon_data,index=[0])
         st.session_state.df_ml_mon = pd.concat([st.session_state.df_ml_mon, df_ml_mon],ignore_index=True)
 
-        file_name_precificacao = '..\\data\\precificacao.csv'
-        file_name_pram_item = '..\\data\\param_itens.csv'
-        file_name_grp_itens_prf = "..\\data\\grp_itens_prf.csv"
-        file_name_itens_prf = "..\\data\\dados_itens.csv"
-        file_name_log_precificacao = '..\\data\\log_precificacao.csv'
-        file_name_data_log_precificacao = "..\\data\\dados_log_precificacao.csv"
+        file_name_precificacao = '..\\project\\src\\data\\precificacao.csv'
+        file_name_pram_item = '..\\project\\src\\data\\param_itens.csv'
+        file_name_grp_itens_prf = "..\\project\\src\\data\\grp_itens_prf.csv"
+        file_name_itens_prf = "..\\project\\src\\data\\dados_itens.csv"
+        file_name_log_precificacao = '..\\project\\src\\data\\log_precificacao.csv'
+        file_name_data_log_precificacao = "..\\project\\src\\data\\dados_log_precificacao.csv"
 
         df_log_precificacao = pd.read_csv(file_name_log_precificacao, sep=';')
         print(df_log_precificacao)
