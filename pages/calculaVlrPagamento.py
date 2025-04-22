@@ -36,8 +36,8 @@ if st.button('Calcula'):
         tx_cto_financeiro = df_precificacao[df_precificacao.contratante == contratante]['idx_custos_financeiros'].iloc[0]
         vigencia = df_precificacao[df_precificacao.contratante == contratante]['vigencia'].iloc[0]
         csto_financeiro = 'Hardware'
-        vlr_cto_hardware = pr.getCustosHardwareSilver(cod_precificacao,csto_financeiro)
-        vlr_parcela = ctso_hw.calculaCstoFinanceiro(tx_cto_financeiro,vigencia,vlr_cto_hardware)
+        vlr_cto_hardware = 0
+        vlr_parcela = 0
         st.code("Tx.Csto_Financeiro = "+str(tx_cto_financeiro))
         st.code("Csto_Hardware = "+str(vlr_cto_hardware))
         st.code("Vigencia = "+str(vigencia))
