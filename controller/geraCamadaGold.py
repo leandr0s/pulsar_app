@@ -1,7 +1,5 @@
 from datetime import datetime
 import pandas as pd
-import pydata_google_auth
-import google.cloud.bigquery
 
 # Caminho para o arquivo JSON da conta de serviço
 SERVICE_ACCOUNT_FILE = "./config_param/electric-armor-429218-g7-f95603f613a1.json"
@@ -14,16 +12,6 @@ PROJECT_NAME = 'electric-armor-429218-g7'
 #this variable is set based on the dataset you chose to query
 #bf.options.bigquery.project = "electric-armor-429218-g7" 
 
-
-def __getClientBQ(SERVICE_ACCOUNT_FILE,PROJECT_NAME):
-    credentials = pydata_google_auth.load_user_credentials(
-        SERVICE_ACCOUNT_FILE,
-    )
-    client = google.cloud.bigquery.BigQueryClient(
-        credentials=credentials,
-        project=PROJECT_NAME
-    )
-    return client
 
 def getServiceAccountFile():
     return SERVICE_ACCOUNT_FILE
