@@ -27,9 +27,8 @@ def gravaPrecificacaoDataFile(df,file_name, id):
     #df.to_gbq(destination_table='electric-armor-429218-g7.prf_cs.precificacao', project_id=PROJECT_NAME , if_exists='append', credentials=big_query_credential)
 
     df_precificacao = pd.read_csv(file_name, sep=';')
-
-    df_precificacao.append(df,ignore_index=True)
-    df_ordenado = df_precificacao.sort_values(by='data', ascending=True)
+    df_precificacao = pd.concat([df_precificacao,df],ignore_index=True)
+    df_ordenado = df_precificacao.sort_values(by='codigo', ascending=True)
 
     df_ordenado.to_csv(file_name, header=True,sep=';',index=False)
     print("Precificacao gravado com sucesso!")
@@ -43,7 +42,7 @@ def gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,
 
     df = pd.DataFrame(columns=['codigo','cod_item','vlr_venda','qnt','percentual_desconto','importacao'])
     dados_grp_itens = []
-    dados_itens = pd.read_csv('../src/data/dados_itens.csv')
+    dados_itens = pd.read_csv('data/dados_itens.csv')
 
     #print(dados_itens)
     
@@ -135,8 +134,9 @@ def gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,
 
     df_itens = pd.read_csv(file_name, sep=';')
 
-    df_itens.append(df,ignore_index=True)
-    df_ordenado = df_itens.sort_values(by='data', ascending=True)
+    df_itens = pd.concat([df_itens,df],ignore_index=True)
+
+    df_ordenado = df_itens.sort_values(by='codigo', ascending=True)
 
     df_ordenado.to_csv(file_name, header=True,sep=';',index=False)
 
@@ -159,12 +159,13 @@ def __assossiaGrpItemDataFile(df):
     #blob = bucket.blob('grp_itens_prf/grp_itens_prf.csv')
     #blob.upload_from_string(df.to_csv(header=True,sep=';',index=False), 'text/csv')
 
-    df_grp_itens = pd.read_csv('../src/data/grp_itens_prf.csv', sep=';')
+    df_grp_itens = pd.read_csv('data/grp_itens_prf.csv', sep=';')
 
-    df_grp_itens.append(df,ignore_index=True)
-    df_ordenado = df_grp_itens.sort_values(by='data', ascending=True)
+    df_grp_itens = pd.concat([df_grp_itens,df],ignore_index=True)
 
-    df_ordenado.to_csv('../src/data/grp_itens_prf.csv',header=True,sep=';',index=False)
+    df_ordenado = df_grp_itens.sort_values(by='cod_param_item', ascending=True)
+
+    df_ordenado.to_csv('data/grp_itens_prf.csv',header=True,sep=';',index=False)
     #df.to_gbq(destination_table='electric-armor-429218-g7.prf_cs.grp_itens_prf', project_id=PROJECT_NAME , if_exists='append', credentials=big_query_credential)
     print("Grupo Itens gravado com sucesso!")
 
@@ -179,14 +180,15 @@ def __geraLogPrecificacaoDataFile(cod_precificacao,acao,status):
     #storage_client = storage.Client()
     df_log = pd.DataFrame(data=log_data,columns=['cod_precificacao','acao','status','dt_ultima_atualizacao','dt_criacao'])
 
-    df_log_anteriores = pd.read_csv('../src/data/grp_itens_prf.csv', sep=';')
+    df_log_anteriores = pd.read_csv('data/log_precificacao.csv', sep=';')
 
-    df_log_anteriores.append(df_log,ignore_index=True)
-    df_ordenado = df_log_anteriores.sort_values(by='data', ascending=True)
+    df_log_anteriores = pd.concat([df_log_anteriores,df_log],ignore_index=True)
+
+    df_ordenado = df_log_anteriores.sort_values(by='cod_precificacao', ascending=True)
     #bucket = storage_client.bucket(BUCKET_SILVER)
     #blob = bucket.blob('log_precificacao/log_precificacao.csv')
     #blob.upload_from_string(df_log.to_csv(header=True,sep=';',index=False), 'text/csv')
     #df_log.to_gbq(destination_table='electric-armor-429218-g7.prf_cs.log_precificacao', project_id=PROJECT_NAME , if_exists='append', credentials=big_query_credential)
-    df_ordenado.to_csv('../src/data/log_precificacao.csv',header=True,sep=';',index=False)
+    df_ordenado.to_csv('data/log_precificacao.csv',header=True,sep=';',index=False)
     print("Log gravado com sucesso!")
 

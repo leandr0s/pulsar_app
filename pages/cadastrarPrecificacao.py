@@ -288,12 +288,12 @@ if st.button('Grava'):
         #path do desenvolvimento padrao windows
         #..\\app\\data\\precificacao.csv
 
-        file_name_precificacao = '../src/data/precificacao.csv'
-        file_name_pram_item = '../src/data/param_itens.csv'
-        file_name_grp_itens_prf = "../src/data/grp_itens_prf.csv"
-        file_name_itens_prf = "../src/data/datadados_itens.csv"
-        file_name_log_precificacao = '../src/data/log_precificacao.csv'
-        file_name_data_log_precificacao = "../src/dados_log_precificacao.csv"
+        file_name_precificacao = 'data/precificacao.csv'
+        file_name_pram_item = 'data/param_itens.csv'
+        file_name_grp_itens_prf = "data/grp_itens_prf.csv"
+        file_name_itens_prf = "data/datadados_itens.csv"
+        file_name_log_precificacao = 'data/log_precificacao.csv'
+        file_name_data_log_precificacao = "dados_log_precificacao.csv"
 
         df_log_precificacao = pd.read_csv(file_name_log_precificacao, sep=';')
         cod_precificacao = controle.gravaPrecificacaoDataFile(df_precificacao,file_name_precificacao,df_log_precificacao.iloc[-1]['cod_precificacao']+1)

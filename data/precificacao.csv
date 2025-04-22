@@ -1,3 +1,5 @@
 codigo;contratante;qnt;freq;vigencia;marcem_precentual;vlr_total;criterio_jugamento;data_sessao;modo_disputa;objetp;uf;idx_ctc_dolar_airtime;idx_ctc_dolar_antena;idx_custos_financeiros;idx_oveheade;idx_tx_importacao;idx_comissao;idx_percentual;overhead;percentual_garantia;premio_seguro
 103;teste 7;0;0;1;0;0;Criterio Julgamento;"0    2025-04-22
 Name: data_sessao, dtype: object";Aberto;Objeto da contratação;AC;0;0;3.0;7.0;0.0;1.5;0;7.0;5.0;2.5
+104;Teste 123;0;0;1;0;0;Criterio Julgamento;"0    2025-04-22
+Name: data_sessao, dtype: object";Aberto;Objeto da contratação;AC;0;0;3.0;7.0;0.0;1.5;0;7.0;5.0;2.5
