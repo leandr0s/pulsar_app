@@ -1,15 +1,8 @@
 import pandas as pd
 import streamlit as st
-import numpy as np
-import altair as alt
 import controller.geraCamadaGold as controle
-import bigframes.pandas as bf
 
-from google.oauth2 import service_account
-from googleapiclient.discovery import build
-from google.cloud import storage
 from controller import precificacaoController as pr
-from controller import calculaCstoFinanceiroHardware as ctso_hw
 
 
 st.title("Calcula o Valor de pagamento para a Precificação")
