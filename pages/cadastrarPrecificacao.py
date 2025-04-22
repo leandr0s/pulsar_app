@@ -1,16 +1,8 @@
 
 import pandas as pd
 import streamlit as st
-import numpy as np
-import altair as alt
 import controller.geraCamadaGold as controle
-import bigframes.pandas as bf
-import os
-from google.oauth2 import service_account
 from googleapiclient.discovery import build
-from google.cloud import storage
-from controller import auth2 as au
-from controller import precificacaoController as pr
 
 
 st.title("Nova Precificação")

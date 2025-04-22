@@ -2,8 +2,6 @@ from datetime import datetime
 import pandas as pd
 import pydata_google_auth
 import google.cloud.bigquery
-from googleapiclient.discovery import build
-
 
 # Caminho para o arquivo JSON da conta de serviço
 SERVICE_ACCOUNT_FILE = "./config_param/electric-armor-429218-g7-f95603f613a1.json"
