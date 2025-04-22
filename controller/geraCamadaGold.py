@@ -38,7 +38,7 @@ def gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,
 
     df = pd.DataFrame(columns=['codigo','cod_item','vlr_venda','qnt','percentual_desconto','importacao'])
     dados_grp_itens = []
-    dados_itens = pd.read_csv('../src/data/data/dados_itens.csv')
+    dados_itens = pd.read_csv('../src/data/dados_itens.csv')
 
     #print(dados_itens)
     
