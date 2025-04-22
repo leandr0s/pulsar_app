@@ -1,9 +1,6 @@
-
 import pandas as pd
 import streamlit as st
 import controller.geraCamadaGold as controle
-from googleapiclient.discovery import build
-
 
 st.title("Nova Precificação")
 
