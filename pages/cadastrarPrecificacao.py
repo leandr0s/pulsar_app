@@ -296,11 +296,8 @@ if st.button('Grava'):
         file_name_data_log_precificacao = "../src/dados_log_precificacao.csv"
 
         df_log_precificacao = pd.read_csv(file_name_log_precificacao, sep=';')
-        print(df_log_precificacao)
         cod_precificacao = controle.gravaPrecificacaoDataFile(df_precificacao,file_name_precificacao,df_log_precificacao.iloc[-1]['cod_precificacao']+1)
         controle.gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,df_ml_mala,df_ml_mon,df_ml_pio,df_ml_ptch,file_name_pram_item,cod_precificacao)
-
-        print(df_precificacao)
 
         
         st.info("Dados gravados com sucesso!")
