@@ -1,0 +1,381 @@
+2025-04-22 12:09:24-0300 [-] Log opened.
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connect.Connect.test1 <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connection.Connection.test_bad_prologue <--
+2025-04-22 12:09:24-0300 [-] bad prologue: b'prologue\n'
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connection.Connection.test_follower_combined <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connection.Connection.test_hashable <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connection.Connection.test_no_relay_follower <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connection.Connection.test_no_relay_leader <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connection.Connection.test_relay <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connection.Connection.test_relay_bad_response <--
+2025-04-22 12:09:24-0300 [-] bad relay_ok: b'not'
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connection.Connection.test_relay_jilted <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.Describe.test_describe_inbound <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.Handshake.test_build <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.Inbound.test_build <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.Outbound.test_no_relay <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.Outbound.test_with_relay <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.Race.test_late <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.Race.test_one_follower <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.Race.test_one_leader <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.Race.test_stop <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_basic <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_build <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_build_noise <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_build_protocol_follower <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_build_protocol_leader <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_connection_abilities <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_empty <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_initial_relay <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_listen <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_listen_addresses <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_listen_but_tor <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_no_listen <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_priorities <--
+2025-04-22 12:09:24-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_relay_delay <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_schedule_connection_no_relay <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_schedule_connection_relay <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_start_listen <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_start_stop <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_tor_no_manager <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_connector.TestConnector.test_tor_with_manager <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_encoding.Encoding.test_be4 <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_endpoints.Connector.test_early_fail <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_endpoints.Connector.test_early_succeed <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_endpoints.Connector.test_late_fail <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_endpoints.Connector.test_late_succeed <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_endpoints.Control.test_early_fail <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_endpoints.Control.test_early_succeed <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_endpoints.Control.test_late_fail <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_endpoints.Control.test_late_succeed <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_endpoints.Listener.test_early_fail <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_endpoints.Listener.test_early_succeed <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_endpoints.Listener.test_late_fail <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_endpoints.Listener.test_late_succeed <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_framer.Framer.test_bad_prologue_length <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_framer.Framer.test_bad_prologue_newline <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_framer.Framer.test_bad_relay <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_framer.Framer.test_frame <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_framer.Framer.test_good_prologue <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_framer.Framer.test_good_relay <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_inbound.InboundTest.test_control_channel <--
+2025-04-22 12:09:25-0300 [-] inbound.handle_open scid
+2025-04-22 12:09:25-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	Failure: wormhole._dilation.inbound.DuplicateOpenError: received duplicate OPEN for b'scid'
+	
+2025-04-22 12:09:25-0300 [-] inbound.handle_data scid 4
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_inbound.InboundTest.test_open_data_close <--
+2025-04-22 12:09:25-0300 [-] inbound.handle_open scid
+2025-04-22 12:09:25-0300 [-] inbound.handle_open scid
+2025-04-22 12:09:25-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	Failure: wormhole._dilation.inbound.DuplicateOpenError: received duplicate OPEN for b'scid'
+	
+2025-04-22 12:09:25-0300 [-] inbound.handle_data scid 4
+2025-04-22 12:09:25-0300 [-] inbound.handle_data scXX 27
+2025-04-22 12:09:25-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	Failure: wormhole._dilation.inbound.DataForMissingSubchannelError: received DATA for non-existent subchannel b'scXX'
+	
+2025-04-22 12:09:25-0300 [-] inbound.handle_close scid
+2025-04-22 12:09:25-0300 [-] inbound.handle_close scXX
+2025-04-22 12:09:25-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	Failure: wormhole._dilation.inbound.CloseForMissingSubchannelError: received CLOSE for non-existent subchannel b'scXX'
+	
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_inbound.InboundTest.test_pause <--
+2025-04-22 12:09:25-0300 [-] inbound.handle_open sci1
+2025-04-22 12:09:25-0300 [-] inbound.handle_open sci2
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_inbound.InboundTest.test_seqnum <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestDilator.test_dilate_first <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestDilator.test_dilate_later <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestDilator.test_disjoint_versions <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestDilator.test_peer_cannot_dilate <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestDilator.test_stop_early <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestDilator.test_transit_relay <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestManager.test_create <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestManager.test_follower <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestManager.test_leader <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestManager.test_make_side <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestManager.test_mirror <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestManager.test_ping_pong <--
+2025-04-22 12:09:25-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	Failure: wormhole._dilation.manager.UnexpectedKCM: 
+	
+2025-04-22 12:09:25-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	Failure: wormhole._dilation.manager.UnknownMessageType: not recognized
+	
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestManager.test_subchannel <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_manager.TestManager.test_unknown_message <--
+2025-04-22 12:09:25-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	Failure: wormhole._dilation.manager.UnknownDilationMessageType: {'type': 'unknown'}
+	
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_build_record <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_connection_send_queued_paused <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_connection_send_queued_unpaused <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_disconnect <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_duplicate_registerProducer <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_outbound_queue <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_pause <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_premptive_ack <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_pull_producer <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_resume_error <--
+2025-04-22 12:09:25-0300 [-] <Mock name='p1' id='2183597472848'> failed, producing will be stopped:
+	Traceback (most recent call last):
+	  File "C:\Users\leandro\.virtualenvs\app-ve50ikBm\Lib\site-packages\wormhole\_dilation\outbound.py", line 352, in _pull
+	    self._producer.resumeProducing()
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1139, in __call__
+	    return self._mock_call(*args, **kwargs)
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1143, in _mock_call
+	    return self._execute_mock_call(*args, **kwargs)
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1198, in _execute_mock_call
+	    raise effect
+	wormhole.test.dilate.test_outbound.PretendResumptionError: 
+	
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_send_if_connected <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_stopProducing <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_subchannel_closed <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_tolerate_duplicate_pause_resume <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.OutboundTest.test_two_pull_producers <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.PushPull.test_error <--
+2025-04-22 12:09:25-0300 [-] <Mock id='2183597464112'> failed, producing will be stopped:
+	Traceback (most recent call last):
+	  File "C:\Users\leandro\.virtualenvs\app-ve50ikBm\Lib\site-packages\wormhole\_dilation\outbound.py", line 352, in _pull
+	    self._producer.resumeProducing()
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1139, in __call__
+	    return self._mock_call(*args, **kwargs)
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1143, in _mock_call
+	    return self._execute_mock_call(*args, **kwargs)
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1204, in _execute_mock_call
+	    result = effect(*args, **kwargs)
+	  File "C:\Users\leandro\.virtualenvs\app-ve50ikBm\Lib\site-packages\wormhole\test\dilate\test_outbound.py", line 583, in <lambda>
+	    p.resumeProducing.side_effect = lambda: action(next(it))
+	  File "C:\Users\leandro\.virtualenvs\app-ve50ikBm\Lib\site-packages\wormhole\test\dilate\test_outbound.py", line 580, in action
+	    raise i
+	wormhole.test.dilate.test_outbound.PretendResumptionError: 
+	
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.PushPull.test_error_during_unregister <--
+2025-04-22 12:09:25-0300 [-] <Mock id='2183597190384'> failed, producing will be stopped:
+	Traceback (most recent call last):
+	  File "C:\Users\leandro\.virtualenvs\app-ve50ikBm\Lib\site-packages\wormhole\_dilation\outbound.py", line 352, in _pull
+	    self._producer.resumeProducing()
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1139, in __call__
+	    return self._mock_call(*args, **kwargs)
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1143, in _mock_call
+	    return self._execute_mock_call(*args, **kwargs)
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1204, in _execute_mock_call
+	    result = effect(*args, **kwargs)
+	  File "C:\Users\leandro\.virtualenvs\app-ve50ikBm\Lib\site-packages\wormhole\test\dilate\test_outbound.py", line 583, in <lambda>
+	    p.resumeProducing.side_effect = lambda: action(next(it))
+	  File "C:\Users\leandro\.virtualenvs\app-ve50ikBm\Lib\site-packages\wormhole\test\dilate\test_outbound.py", line 580, in action
+	    raise i
+	wormhole.test.dilate.test_outbound.PretendResumptionError: 
+	
+2025-04-22 12:09:25-0300 [-] <Mock id='2183597415104'> failed to unregister producer:
+	Traceback (most recent call last):
+	  File "C:\Users\leandro\.virtualenvs\app-ve50ikBm\Lib\site-packages\wormhole\_dilation\outbound.py", line 357, in _pull
+	    self._unregister()
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1139, in __call__
+	    return self._mock_call(*args, **kwargs)
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1143, in _mock_call
+	    return self._execute_mock_call(*args, **kwargs)
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1198, in _execute_mock_call
+	    raise effect
+	wormhole.test.dilate.test_outbound.PretendUnregisterError: 
+	
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.PushPull.test_start_paused <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.PushPull.test_start_unpaused <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.PushPull.test_start_unpaused_two_writes <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_outbound.PushPull.test_stop <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_parse.Parse.test_encode <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_parse.Parse.test_parse <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_record.Record.test_bad_handshake <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_record.Record.test_bad_message <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_record.Record.test_good <--
+2025-04-22 12:09:25-0300 [-] --> wormhole.test.dilate.test_record.Record.test_good2 <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_record.Record.test_large_frame <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_record.Record.test_send_record <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.HalfCloseable.test_create <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.HalfCloseable.test_local_close <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.HalfCloseable.test_remote_close <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.SubChannelAPI.test_close_before_open <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.SubChannelAPI.test_consumer <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.SubChannelAPI.test_create <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.SubChannelAPI.test_data <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.SubChannelAPI.test_data_before_open <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.SubChannelAPI.test_local_close <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.SubChannelAPI.test_local_double_close <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.SubChannelAPI.test_once <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.SubChannelAPI.test_producer <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.SubChannelAPI.test_remote_close <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.SubChannelAPI.test_write <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.dilate.test_subchannel.SubChannelAPI.test_write_when_closing <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_eventual.Eventual.test_error <--
+2025-04-22 12:09:26-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "C:\Users\leandro\.virtualenvs\app-ve50ikBm\Lib\site-packages\wormhole\eventual.py", line 31, in _turn
+	    f(*args, **kwargs)
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1139, in __call__
+	    return self._mock_call(*args, **kwargs)
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1143, in _mock_call
+	    return self._execute_mock_call(*args, **kwargs)
+	  File "C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\mock.py", line 1198, in _execute_mock_call
+	    raise effect
+	wormhole.test.test_eventual.IntentionalError: 
+	
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_eventual.Eventual.test_eventually <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_eventual.Eventual.test_flush <--
+2025-04-22 12:09:26-0300 [-] Main loop terminated.
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_hints.Hints.test_comparable <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_hints.Hints.test_describe_hint_obj <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_hints.Hints.test_encode_hint <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_hints.Hints.test_endpoint_from_hint_obj <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_hints.Hints.test_parse_hint <--
+2025-04-22 12:09:26-0300 [-] unknown hint type: {'type': 'unrecognized'}
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_hints.Hints.test_parse_hint_argv <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_hints.Hints.test_parse_tcp_v1_hint <--
+2025-04-22 12:09:26-0300 [-] unknown hint type: {'type': 'unknown'}
+2025-04-22 12:09:26-0300 [-] invalid hostname in hint: {'type': 'direct-tcp-v1'}
+2025-04-22 12:09:26-0300 [-] invalid hostname in hint: {'type': 'direct-tcp-v1', 'hostname': 12}
+2025-04-22 12:09:26-0300 [-] invalid port in hint: {'type': 'direct-tcp-v1', 'hostname': 'foo'}
+2025-04-22 12:09:26-0300 [-] invalid port in hint: {'type': 'direct-tcp-v1', 'hostname': 'foo', 'port': 'not a number'}
+2025-04-22 12:09:26-0300 [-] C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\case.py:580: builtins.RuntimeWarning: TestResult has no addDuration method
+2025-04-22 12:09:26-0300 [-] C:\Users\leandro\anaconda3\envs\myenv\Lib\unittest\case.py:580: builtins.RuntimeWarning: TestResult has no addDuration method
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_ipaddrs.ListAddresses.test_list <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_ipaddrs.ListAddresses.test_list_mock_cygwin <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_ipaddrs.ListAddresses.test_list_mock_ifconfig <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_ipaddrs.ListAddresses.test_list_mock_ip_addr <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_ipaddrs.ListAddresses.test_list_mock_route <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_journal.Journal.test_immediate <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_journal.Journal.test_journal <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_keys.Derive.test_derive_errors <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_keys.Derive.test_derive_key <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_keys.Derive.test_derive_phase_key <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_keys.Encrypt.test_decrypt <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_keys.Encrypt.test_encrypt <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Allocator.test_allocate_first <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Allocator.test_connect_first <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Allocator.test_no_allocation <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_allocate_code <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_basic <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_close_early <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_error_while_closing <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_input_code <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_internal_error <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_lonely <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_scary_phase <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_scary_version <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_server_error <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_set_code_bad_format <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_set_code_twice <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_unknown_phase <--
+2025-04-22 12:09:26-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	Failure: wormhole.errors._UnknownPhaseError: received unknown phase 'unknown-phase'
+	
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Boss.test_unwelcome <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Code.test_allocate_code <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Code.test_input_code <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Code.test_set_code <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Code.test_set_code_invalid <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Input.test_bad_nameplate <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Input.test_ignore_completion <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Input.test_with_completion <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Key.test_bad <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Key.test_good <--
+2025-04-22 12:09:26-0300 [-] --> wormhole.test.test_machines.Key.test_reversed <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Lister.test_connect_first <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Lister.test_connect_first_ask_twice <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Lister.test_reconnect <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Lister.test_refresh_first <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Lister.test_unrefreshed <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Mailbox.test_close_while_idle <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Mailbox.test_close_while_idle_but_connected <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Mailbox.test_close_while_mailbox_disconnected <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Mailbox.test_close_while_reconnecting <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Mailbox.test_connect_first <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Mailbox.test_mailbox_first <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_close_while_claimed <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_close_while_claimed_but_disconnected <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_close_while_claiming <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_close_while_claiming_but_disconnected <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_close_while_done <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_close_while_done_but_disconnected <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_close_while_idle <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_close_while_idle_connected <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_close_while_releasing <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_close_while_releasing_but_disconnecteda <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_close_while_unclaimed <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_connect_first <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_reconnect_while_claimed <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_reconnect_while_claiming <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_reconnect_while_done <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_reconnect_while_releasing <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_set_first <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Nameplate.test_set_invalid <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Order.test_in_order <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Order.test_out_of_order <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Receive.test_early_bad <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Receive.test_good <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Receive.test_late_bad <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Rendezvous.test_basic <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Rendezvous.test_endpoints <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Rendezvous.test_websocket_failure <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Rendezvous.test_websocket_lost <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Send.test_key_first <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Send.test_send_first <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_machines.Terminator.test_terminate <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_observer.Empty.test_set <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_observer.OneShot.test_error_after_firing <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_observer.OneShot.test_error_before_firing <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_observer.OneShot.test_fire <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_observer.OneShot.test_fire_if_not_fired <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_observer.Sequence.test_error <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_observer.Sequence.test_fire <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Completion.test_build_completions <--
+2025-04-22 12:09:27-0300 [-] Main loop terminated.
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Completion.test_call <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Completion.test_incomplete_code <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Completion.test_rollback_nameplate_during_completion <--
+2025-04-22 12:09:27-0300 [-] Main loop terminated.
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Completion.test_rollback_nameplate_during_finish <--
+2025-04-22 12:09:27-0300 [-] Main loop terminated.
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Completion.test_simple <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Completion.test_warn_readline <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Completion.test_wrap_error <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Input.test_wrapper <--
+2025-04-22 12:09:27-0300 [-] Main loop terminated.
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Sync.test_bytes <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Sync.test_libedit <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Sync.test_no_readline <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Sync.test_readline <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_rlcompleter.Sync.test_readline_no_docstring <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_ssh.FindPubkey.test_bad_hint <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_ssh.FindPubkey.test_comment_with_spaces <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_ssh.FindPubkey.test_find_multiple <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_ssh.FindPubkey.test_find_none <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_ssh.FindPubkey.test_find_one <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_tor_manager.SocksOnly.test_tor <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_tor_manager.Tor.test_bad_args <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_tor_manager.Tor.test_connect <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_tor_manager.Tor.test_connect_custom_control_port <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_tor_manager.Tor.test_connect_custom_control_port_fails <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_tor_manager.Tor.test_connect_fails <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_tor_manager.Tor.test_launch <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_tor_manager.Tor.test_no_txtorcon <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_util.Space.test_free_space <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_util.Space.test_no_statvfs <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_util.Utils.test_bytes_to_dict <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_util.Utils.test_bytes_to_hexstr <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_util.Utils.test_dict_to_bytes <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_util.Utils.test_hexstr_to_bytes <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_util.Utils.test_to_bytes <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_util_attrs_zope.TestProvides.test_fail <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_util_attrs_zope.TestProvides.test_repr <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_util_attrs_zope.TestProvides.test_success <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_wordlist.Choose.test_choose_words <--
+2025-04-22 12:09:27-0300 [-] --> wormhole.test.test_wordlist.Completions.test_completions <--
