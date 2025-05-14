@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import controller.geraCamadaGold as controle
+import controller.precificacaoController as prControle
 
 st.title("Nova Precificação")
 
@@ -295,8 +296,8 @@ if st.button('Grava'):
         file_name_log_precificacao = 'data/log_precificacao.csv'
         file_name_data_log_precificacao = "dados_log_precificacao.csv"
 
-        df_log_precificacao = pd.read_csv(file_name_log_precificacao, sep=';')
-        cod_precificacao = controle.gravaPrecificacaoDataFile(df_precificacao,file_name_precificacao,df_log_precificacao.iloc[-1]['cod_precificacao']+1)
+        max_id_precificacao = prControle.getMaxIdPrecificacao()
+        cod_precificacao = controle.gravaPrecificacaoDataFile(df_precificacao,file_name_precificacao,max_id_precificacao+1)
         controle.gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,df_ml_mala,df_ml_mon,df_ml_pio,df_ml_ptch,file_name_pram_item,cod_precificacao)
 
         

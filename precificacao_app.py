@@ -25,6 +25,7 @@ st.title("App Precificações Pulsar")
 
 st.sidebar.title("Precificação")
 st.sidebar.page_link("pages/cadastrarPrecificacao.py", label="Cadastrar")
+st.sidebar.page_link("pages/editarPrecificacao.py", label="Editar")
 st.sidebar.page_link("pages/listarPrecificacao.py", label="Listar")
 st.sidebar.page_link("https://lookerstudio.google.com/reporting/1f5d63fc-8e2b-473b-a96d-66c23f64cdf2/page/CbJ9D", label="Looker")
 
