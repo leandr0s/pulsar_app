@@ -5,7 +5,7 @@ import controller.geraCamadaGold as controle
 from controller import precificacaoController as pr
 
 
-st.title("Valores dos Itens da Precificação")
+st.title("Editar Precificação")
 
 st.caption("Selecione a precificação")
 

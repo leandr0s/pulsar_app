@@ -9,11 +9,6 @@ cod_param_item;cod_grupo;cod_precificacao
 461.0;ML;105
 462.0;MN;105
 463.0;MO;105
-468.0;MA;107
-469.0;ML;107
-470.0;ML;107
-471.0;ML;107
-472.0;ML;107
 473.0;MA;108
 474.0;ML;108
 475.0;ML;108
@@ -40,8 +35,4 @@ cod_param_item;cod_grupo;cod_precificacao
 508.0;ML;104
 509.0;MN;104
 510.0;MO;104
-511.0;MA;106
-512.0;ML;106
-513.0;ML;106
-514.0;ML;106
-515.0;MN;106
+515.0;ML;107
