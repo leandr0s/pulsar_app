@@ -1,11 +1,8 @@
 codigo;contratante;qnt;freq;vigencia;marcem_precentual;vlr_total;criterio_jugamento;data_sessao;modo_disputa;objetp;uf;idx_ctc_dolar_airtime;idx_ctc_dolar_antena;idx_custos_financeiros;idx_oveheade;idx_tx_importacao;idx_comissao;idx_percentual;overhead;percentual_garantia;premio_seguro
-103;teste 7;0;0;6;0;0;Criterio Julgamento;2025-04-22;Aberto;Objeto da contratação;AC;0;0;3.0;7.0;0.0;1.5;0;7.0;5.0;2.5
+103;teste 7;0;0;4;0;0;Criterio Julgamento;2025-04-22;Aberto;Objeto da contratação;AC;0;0;3.0;7.0;0.0;1.5;0;7.0;5.0;2.5
 104;Teste 123;0;0;4;0;0;Criterio Julgamento;2025-04-22;Aberto;Objeto da contratação;AC;0;0;3.0;7.0;0.0;1.5;0;7.0;5.0;2.5
 105;Teste 8;0;0;13;0;0;Criterio Julgamento;2025-05-14;Aberto;Objeto da contratação;AC;0;0;3.0;7.0;0.0;1.5;0;7.0;5.0;2.5
-106;SESI São Paulo;0;0;12;0;0;;2025-04-28;Aberto;Contrataçao de Serviço de comunicaçao LEO;SP;0;0;3.0;7.0;0.0;1.5;0;7.0;5.0;2.5
-106;teste 11;0;0;2;0;0;Criterio Julgamento;2025-05-14;Aberto;Objeto da contratação;CE;0;0;3.0;7.0;0.0;1.5;0;7.0;5.0;2.5
-106;teste 34;0;0;2;0;0;fsfs;2025-05-14;Aberto;sdfsdfs;AC;0;0;3.0;7.0;0.0;1.5;0;7.0;5.0;2.5
-106;fsdsdfsd 233;0;0;2;0;0;dfdsfsd;2025-05-14;Aberto;fdsfsd;AC;0;0;3.0;7.0;0.0;1.5;0;7.0;5.0;2.5
+106;teste 11;0;0;2;0;0;Criterio Julgamento;2025-05-14;Aberto;Objeto da contratação;AC;0;0;3.0;7.849999999999997;0.0;1.5;0;7.849999999999997;5.0;2.5
 107;OPERAÇÃO ACOLHIDA;0;0;12;0;0;Menor Preço;2025-05-13;Fechado;Registro de preços para eventual contratação do serviço de Internet móvel via satélite,  para manter os integrantes da Força Tarefa conectados à rede de internet em situações adversas nos deslocamentos entre Boa Vista e Pacaraima - RR.;RR;0;0;3.0;7.0;0.0;1.5;0;7.0;5.0;2.5
 108;teste 9;0;0;3;0;0;Criterio Julgamento;2025-05-14;Aberto;Objeto da contratação;MG;0;0;3.0;7.0;0.0;1.5;0;7.0;5.0;2.5
 109;teste 10;0;0;1;0;0;Criterio Julgamento;2025-05-14;Aberto;Objeto da contratação;BA;0;0;3.0;7.0;0.0;1.5;0;7.0;5.0;2.5

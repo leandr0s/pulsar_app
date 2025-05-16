@@ -55,7 +55,7 @@ def gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,
         
         df_ma['cod_item'].iloc[0] = cod_item.iloc[0]['codigo']
         df_ma['codigo'].iloc[0] = ultimo_cod_param_item
-        dados_grp_itens.append([ultimo_cod_param_item,'MA',cod_precificacao])
+        dados_grp_itens.append([ultimo_cod_param_item,'MA',int(cod_precificacao)])
         ultimo_cod_param_item = ultimo_cod_param_item +1        
         df = pd.concat([df,df_ma],ignore_index=True)
         
@@ -64,7 +64,7 @@ def gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,
         cod_item = dados_itens[dados_itens['objeto'].isin([df_ml['cod_item'].iloc[0]])]
         df_ml['cod_item'].iloc[0] = cod_item.iloc[0]['codigo']
         df_ml['codigo'].iloc[0] = ultimo_cod_param_item
-        dados_grp_itens.append([ultimo_cod_param_item,'ML',cod_precificacao])
+        dados_grp_itens.append([ultimo_cod_param_item,'ML',int(cod_precificacao)])
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_ml],ignore_index=True)
 
@@ -72,7 +72,7 @@ def gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,
         #cod_item = bf.read_gbq_query('select t1.codigo from electric-armor-429218-g7.prf_cs.itens t1 where t1.objeto = \''+ str(df_ml_ptch['cod_item'].iloc[0]) + '\'')
         df_ml_ptch['cod_item'].iloc[0] = 12
         df_ml_ptch['codigo'].iloc[0] = ultimo_cod_param_item
-        dados_grp_itens.append([ultimo_cod_param_item,'ML',cod_precificacao])
+        dados_grp_itens.append([ultimo_cod_param_item,'ML',int(cod_precificacao)])
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_ml_ptch],ignore_index=True)
 
@@ -80,7 +80,7 @@ def gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,
         #cod_item = bf.read_gbq_query('select t1.codigo from electric-armor-429218-g7.prf_cs.itens t1 where t1.objeto = \''+ str(df_ml_eth['cod_item'].iloc[0]) + '\'')
         df_ml_eth['cod_item'].iloc[0] = 10
         df_ml_eth['codigo'].iloc[0] = ultimo_cod_param_item
-        dados_grp_itens.append([ultimo_cod_param_item,'ML',cod_precificacao])
+        dados_grp_itens.append([ultimo_cod_param_item,'ML',int(cod_precificacao)])
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_ml_eth],ignore_index=True)
 
@@ -88,7 +88,7 @@ def gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,
         #cod_item = bf.read_gbq_query('select t1.codigo from electric-armor-429218-g7.prf_cs.itens t1 where t1.objeto = \''+ str(df_ml_inv['cod_item'].iloc[0]) + '\'')
         df_ml_inv['cod_item'].iloc[0] = 11
         df_ml_inv['codigo'].iloc[0] = ultimo_cod_param_item
-        dados_grp_itens.append([ultimo_cod_param_item,'ML',cod_precificacao])
+        dados_grp_itens.append([ultimo_cod_param_item,'ML',int(cod_precificacao)])
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_ml_inv],ignore_index=True)
 
@@ -96,7 +96,7 @@ def gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,
         #cod_item = bf.read_gbq_query('select t1.codigo from electric-armor-429218-g7.prf_cs.itens t1 where t1.objeto = \''+ str(df_ml_mala['cod_item'].iloc[0]) + '\'')
         df_ml_mala['cod_item'].iloc[0] = 13
         df_ml_mala['codigo'].iloc[0] = ultimo_cod_param_item
-        dados_grp_itens.append([ultimo_cod_param_item,'ML',cod_precificacao])
+        dados_grp_itens.append([ultimo_cod_param_item,'ML',int(cod_precificacao)])
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_ml_mala],ignore_index=True)
 
@@ -104,7 +104,7 @@ def gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,
        #cod_item = bf.read_gbq_query('select t1.codigo from electric-armor-429218-g7.prf_cs.itens t1 where t1.objeto = \''+ str(df_ml_mon['cod_item'].iloc[0]) + '\'')
         df_ml_mon['cod_item'].iloc[0] = 18
         df_ml_mon['codigo'].iloc[0] = ultimo_cod_param_item
-        dados_grp_itens.append([ultimo_cod_param_item,'ML',cod_precificacao])
+        dados_grp_itens.append([ultimo_cod_param_item,'ML',int(cod_precificacao)])
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_ml_mon],ignore_index=True)
 
@@ -112,7 +112,7 @@ def gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,
         #cod_item = bf.read_gbq_query('select t1.codigo from electric-armor-429218-g7.prf_cs.itens t1 where t1.objeto = \''+ str(df_ml_pio['cod_item'].iloc[0]) + '\'')
         df_ml_pio['cod_item'].iloc[0] = 14
         df_ml_pio['codigo'].iloc[0] = ultimo_cod_param_item
-        dados_grp_itens.append([ultimo_cod_param_item,'ML',cod_precificacao])
+        dados_grp_itens.append([ultimo_cod_param_item,'ML',int(cod_precificacao)])
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_ml_pio],ignore_index=True)
 
@@ -124,14 +124,14 @@ def gravaItensPrecificacaoDataFile(df_ma, df_ml,df_mn,df_mo,df_ml_eth,df_ml_inv,
             df_mn['cod_item'].iloc[0] = 20
         else: df_mn['cod_item'].iloc[0] = None
         df_mn['codigo'].iloc[0] = ultimo_cod_param_item
-        dados_grp_itens.append([ultimo_cod_param_item,'MN',cod_precificacao])
+        dados_grp_itens.append([ultimo_cod_param_item,'MN',int(cod_precificacao)])
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_mn],ignore_index=True)
         
     if df_mo['qnt'].iloc[0] > 0 and df_mo['cod_item'].iloc[0] == True:
         df_mo['cod_item'].iloc[0] = 17
         df_mo['codigo'].iloc[0] = ultimo_cod_param_item
-        dados_grp_itens.append([ultimo_cod_param_item,'MO',cod_precificacao])
+        dados_grp_itens.append([ultimo_cod_param_item,'MO',int(cod_precificacao)])
         ultimo_cod_param_item = ultimo_cod_param_item +1
         df = pd.concat([df,df_mo],ignore_index=True)
 
