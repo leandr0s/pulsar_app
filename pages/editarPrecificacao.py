@@ -57,6 +57,7 @@ if contratante != None:
     col1, col2 = st.columns(2)
     col1, col2 = st.columns(2)
     with col1:
+        UF = {'AC':0, 'AL':1, 'AM':2,'AP':3, 'BA':4, 'CE':5, 'DF':6, 'ES':7, 'GO':8, 'MA':9, 'MG':10, 'MS':11, 'MT':12, 'PA':13, 'PB':14, 'PE':15, 'PI':16, 'PR':17, 'RJ':18, 'RN':19, 'RO':20, 'RR':21, 'RS':22, 'SC':23, 'SE':24, 'SP':25,'TO':26}
         uf = uf = st.selectbox('UF', ['AC',
                                 'AL',
                                 'AM',
@@ -83,7 +84,7 @@ if contratante != None:
                                 'SC',
                                 'SE',
                                 'SP',
-                                'TO'],placeholder=uf_pre)
+                                'TO'],index=UF[uf_pre])
 
 
     st.caption("Itens da precificação")
@@ -98,7 +99,7 @@ if contratante != None:
         vlr_venda_ma_edit = 0.0
         paconte_ma_edit = 0
         objeto_ma_edit = 'Selecione'
-        
+                
         if item_ma_edit.size > 0:
             cod_item_ma = item_ma_edit.cod_item.iloc[0]
             qnt_ma_edit = item_ma_edit.qnt.iloc[0]
@@ -106,9 +107,10 @@ if contratante != None:
             paconte_ma_edit = item_ma_edit.pacote.iloc[0]
             objeto_ma_edit = item_ma_edit.objeto.iloc[0]
             cod_param_item_ma = item_ma_edit['cod_param_item'].iloc[0]
-            
-        item_ma = st.selectbox('Airtime', ['Terminal Access (500GB)'
-                                , 'Terminal Access (50GB)'], placeholder=objeto_ma_edit)
+
+        AIRTIME = {'Selecione':0,'Terminal Access (500GB)':1, 'Terminal Access (50GB)':2}
+        item_ma = st.selectbox('Airtime', ['Selecione','Terminal Access (500GB)'
+                                , 'Terminal Access (50GB)'], index=AIRTIME[objeto_ma_edit])
 
         
     col1, col2, col3 = st.columns(3)
@@ -137,9 +139,11 @@ if contratante != None:
             vlr_venda_ml_edit = item_ml_edit.vlr_venda.iloc[0]
             objeto_ml_edit = item_ml_edit.objeto.iloc[0]
             cod_param_item_ml = item_ml_edit['cod_param_item'].iloc[0]
+
+        LOCACAO = {'Selecione':0,'Antena Starlink Flat High Performance':1, 'Antena Starlink Standard':2}
             
-        item_ml = item_ml = st.selectbox('Locação de Equipamento', ['Antena Starlink Flat High Performance'
-                                               , 'Antena Starlink Standard'],placeholder=objeto_ml_edit)
+        item_ml = item_ml = st.selectbox('Locação de Equipamento', ['Selecione','Antena Starlink Flat High Performance'
+                                               , 'Antena Starlink Standard'],index=LOCACAO[objeto_ml_edit])
     
     col1, col2, col3 = st.columns(3)
 
