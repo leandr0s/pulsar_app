@@ -19,8 +19,7 @@ with st.container():
         {
             "name": df_precificacao.contratante,
             "uf": df_precificacao.uf,
-            "status": df_precificacao.status,
-            "acao": df_precificacao.acao
+            "status": df_precificacao.status
         }
     )
     st.dataframe(

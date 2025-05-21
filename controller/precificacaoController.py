@@ -1,5 +1,6 @@
 from datetime import datetime
 import pandas as pd
+import numpy as np
 
 
 # Caminho para o arquivo JSON da conta de serviço
@@ -11,7 +12,11 @@ PROJECT_NAME = 'electric-armor-429218-g7'
 
 def getPrecificacao(status,limit):
     df = pd.read_csv('data/precificacao.csv', sep=';')
-    return df
+    df2 = pd.read_csv('data/log_precificacao.csv', sep=';')
+    df_final = pd.merge(df,df2, how='left', left_on='codigo', right_on='cod_precificacao')
+    df_final = df_final[df_final.status == status]
+    df_final = df_final.groupby(['contratante','uf','status']).agg(Maximum_Date=('dt_ultima_atualizacao', np.max)).reset_index()
+    return df_final
 
 def getMaxIdPrecificacao():
     df_log_anteriores = pd.read_csv('data/log_precificacao.csv', sep=';')
