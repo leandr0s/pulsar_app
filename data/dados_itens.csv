@@ -21,3 +21,4 @@ codigo,objeto,und,custo_ref,categoria,grp_categoria,peso,pacote
 14,Pulsar IO,Unidade,750,Recorrente,Subtotal Locacao,1,1
 22,Terminal Access (50GB),Unidade,105,Recorrente,Subotal Serviço Airtime,1,50
 21,Terminal Access (500GB),Unidade,525,Recorrente,Subotal Serviço Airtime,1,500
+22,Terminal Access (1GB),Unidade,1.76,Recorrente,Subotal Serviço Airtime,1,1

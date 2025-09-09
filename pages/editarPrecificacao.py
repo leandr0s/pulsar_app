@@ -110,7 +110,7 @@ if contratante != None:
 
         AIRTIME = {'Selecione':0,'Terminal Access (500GB)':1, 'Terminal Access (50GB)':2}
         item_ma = st.selectbox('Airtime', ['Selecione','Terminal Access (500GB)'
-                                , 'Terminal Access (50GB)'], index=AIRTIME[objeto_ma_edit])
+                                , 'Terminal Access (50GB)', 'Terminal Access (1GB)'], index=AIRTIME[objeto_ma_edit])
 
         
     col1, col2, col3 = st.columns(3)
