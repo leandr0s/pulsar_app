@@ -65,7 +65,7 @@ with st.container():
     col1, col2 = st.columns(2)
     with col1:
         item_ma = st.selectbox('Airtime', ['Terminal Access (500GB)'
-                                , 'Terminal Access (50GB)'])
+                                , 'Terminal Access (50GB)', 'Terminal Access (1GB)'])
 
         
     col1, col2, col3 = st.columns(3)
