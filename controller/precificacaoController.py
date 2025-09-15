@@ -17,6 +17,14 @@ def getPrecificacao(status,limit):
     df_final = df_final[df_final.status == status]
     df_final = df_final.groupby(['contratante','uf','status']).agg(Maximum_Date=('dt_ultima_atualizacao', np.max)).reset_index()
     return df_final
+def getFraquiaParamItem(cod_item,cod_param_item):
+    df = pd.read_csv('data/param_itens.csv', sep=';')
+    df = df[(df.cod_item == cod_item) & (df.codigo == cod_param_item)]
+    franquia = 0
+    if not df.empty:
+        franquia = df.iloc[0]['franquia']
+    return int(franquia)
+
 
 def getMaxIdPrecificacao():
     df_log_anteriores = pd.read_csv('data/log_precificacao.csv', sep=';')

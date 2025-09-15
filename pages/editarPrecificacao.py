@@ -104,9 +104,10 @@ if contratante != None:
             cod_item_ma = item_ma_edit.cod_item.iloc[0]
             qnt_ma_edit = item_ma_edit.qnt.iloc[0]
             vlr_venda_ma_edit = item_ma_edit.vlr_venda.iloc[0]
-            paconte_ma_edit = item_ma_edit.pacote.iloc[0]
-            objeto_ma_edit = item_ma_edit.objeto.iloc[0]
             cod_param_item_ma = item_ma_edit['cod_param_item'].iloc[0]
+            paconte_ma_edit = pr.getFraquiaParamItem(cod_item_ma,cod_param_item_ma)
+            objeto_ma_edit = item_ma_edit.objeto.iloc[0]
+            
 
         AIRTIME = {'Selecione':0,'Terminal Access (500GB)':1, 'Terminal Access (50GB)':2, 'Terminal Access (1GB)':3}
         item_ma = st.selectbox('Airtime', ['Selecione','Terminal Access (500GB)'
